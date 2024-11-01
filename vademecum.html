@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <title>Vademecum - Laboratorios Pasteur</title>
+    </head>
+<body>
+
+
+
+        <!-- section noticia -->
+        <section id="noticia" class="p5 bg-light text-dark"> 
+
+            <div class="container mt-5 pt-3 ">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    
+                    <a href="crear-articulo.html" class="btn btn-primary" id="boton-crear-articulo">Crear Nueva Noticia</a>
+                    
+                </div>
+        
+                <div class="form-row pt-3">
+                    <div class="form-group col-md-8">
+                        <input type="text" class="form-control" id="input-filtro-titulo" placeholder="Filtrar por titulo">
+                    </div>
+    
+                    <div class="form-group col-md-8 pt-2">
+                        <select class="form-control mt-2" id="input-filtro-categoria" required>
+                            <option value="" disabled selected>Filtrar por línea terapéutica</option>
+                            <option value="">Todos</option>
+                            <option value="atletismo">Atletismo</option>
+                            <option value="basketball">Basketball</option>
+                            <option value="ciclismo">Ciclismo</option>
+                            <option value="canotaje">Canotaje</option>
+                            <option value="futbol">Fútbol</option>
+                            <option value="gimnasia">Gimnasia Artística</option>
+                            <option value="golf">Golf</option>
+                            <option value="handball">Handball</option>
+                            <option value="hockey">Hockey</option>
+                            <option value="natacion">Natación</option>
+                            <option value="nado">Nado Sincronizado</option>
+                            <option value="artesmarciales">Artes Marciales</option>
+                            <option value="paleta">Paleta</option>
+                            <option value="remo">Remo</option>
+                            <option value="rugby">Rugby</option>
+                            <option value="surf">Surf</option>
+                            <option value="tenis">Tenis</option>
+                            <option value="vela">Vela</option>
+                            <option value="volleyball">Volleyball</option>                                     
+    
+                        </select>
+                    </div>
+    
+                    <div class="form-group col-md-8 pt-3">
+                        
+                        <input type="button" class="btn btn-secondary" id="boton-filtro" value="Filtrar Noticia" />
+    
+                    </div>
+                </div>
+        
+                <div id="newsContainer" class="row pt-3 pb-3">
+                    <!-- Aqui se ven las cards de productos -->
+                    <!-- ejemplo de 4 cards
+                     <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Hockey">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Titulo de noticia 1</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">27 Junio 2024</h6>
+                                <p class="card-text">Este un texto simplificado de una noticia</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-secondary">Editar</a>
+                                    <a href="#" class="btn btn-danger">Borrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Hockey">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Titulo de noticia 2</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">27 Junio 2024</h6>
+                                <p class="card-text">Este un texto simplificado de una noticia</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-secondary">Editar</a>
+                                    <a href="#" class="btn btn-danger">Borrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Hockey">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Titulo de noticia 3</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">27 Junio 2024</h6>
+                                <p class="card-text">Este un texto simplificado de una noticia</p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-secondary">Editar</a>
+                                    <a href="#" class="btn btn-danger">Borrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                </div>
+    
+                <div id="newsContainer-error" class="row pt-3 pb-3 error"></div>
+            </div>
+    
+    
+    
+    
+            
+    
+    
+    
+            
+        </section>
+    
+    
+    
+    
+    
+    
+        <!-- footer -->
+    
+    
+        <footer class="p-5 bg-dark text-white text-center position-relative">
+            <div class="container-fluid">
+                <p class="lead">Copyright &copy; 2024 Laboratorios Pasteur</p>
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                    <i class="bi bi-arrow-up-circle h1"></i>
+                </a>
+            </div>
+        </footer>
+
+        <script src="js/script.js" type="module"></script>
+</body>
+</html>
