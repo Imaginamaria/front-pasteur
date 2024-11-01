@@ -11964,47 +11964,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-body {
-  background-color: #F2F2F2;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.carousel-caption h2, .carousel-caption .h2 {
-  font-size: 3.5rem;
-}
-
-.carousel-caption p {
-  font-size: 2rem;
-}
-
-.carousel-item {
-  height: 80vh; /* Ajusta esta altura */
-}
-
-.carousel-item img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.card-text .text-truncate-3-lines {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-img-top {
-  height: 200px; /* Ajustar altura  */
-  -o-object-fit: cover;
-     object-fit: cover; /* imagen se recorte correctamente */
-}/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=bootstrap.css.map */

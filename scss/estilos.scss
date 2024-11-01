@@ -27,7 +27,7 @@ body{
     font-size: 2rem;
   }
   .carousel-item {
-    height: 80vh; /* Ajusta esta altura según sea necesario */
+    height: 80vh; /* Ajusta esta altura */
   }
   .carousel-item img {
     height: 100%;
@@ -49,6 +49,6 @@ body{
 }
 
 .card-img-top {
-    height: 200px; /* Ajusta esta altura según tus necesidades */
-    object-fit: cover; /* Asegura que la imagen se recorte correctamente si es necesario */
+    height: 200px; /* Ajustar altura  */
+    object-fit: cover; /* imagen se recorte correctamente */
 }
