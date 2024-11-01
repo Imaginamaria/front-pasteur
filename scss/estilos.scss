@@ -33,3 +33,22 @@ body{
     height: 100%;
     object-fit: cover;
   }
+
+
+  .card-text{
+
+    .text-truncate-3-lines {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      
+}
+
+.card-img-top {
+    height: 200px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente si es necesario */
+}
