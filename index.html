@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -12,7 +15,7 @@
 <body>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md bg-light">
-            <div class="container">
+            <div class="container ">
               <a href="#" class="navbar-brand"><img src="img/logo-laboratorios-pasteur.png" alt="Laboratorios Pasteur Logo" width="250"></a>
               <button
                 type="button"
@@ -49,6 +52,8 @@
         <div class="container-fluid">
 
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators -->
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -56,24 +61,35 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active d-item">
-                <img src="img/banner-rodeo-pasteur.jpg" class="d-block w-100 d-img" alt="pasteur rodeo">
+                <img src="img/banner-rodeo-pasteur.jpg" class="d-block w-100 d-img" alt="sanidad pasteur para su rodeo">
                 <div class="carousel-caption d-none d-md-block">
                   <h2>Innovación y excelencia en productos veterinarios</h2>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-danger stretched-link">Explora nuestra línea de productos</a>
+                </div>
                 </div>
               </div>
               <div class="carousel-item d-item">
-                <img src="img/banner-rodeo-ovejas-pasteur.jpg" class="d-block w-100 d-img" alt="pasteur ovinos">
+                <img src="img/banner-rodeo-ovejas-pasteur.jpg" class="d-block w-100 d-img" alt="sanidad pasteur para ovinos">
                 <div class="carousel-caption d-none d-md-block">
                   <h2>Comprometidos con el futuro de la salud animal</h2>
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-danger stretched-link">Explora nuestra línea de productos</a>
+                </div>
                 </div>
               </div>
               <div class="carousel-item d-item">
-                <img src="img/banner-rodeo-borregos-pasteur.jpg" class="d-block w-100 d-img" alt="pasteur borregos">
+                <img src="img/banner-rodeo-borregos-pasteur.jpg" class="d-block w-100 d-img" alt="sanidad pasteur para borregos">
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Innovación constante, resultados comprobados</h2>
+                    <div class="d-flex justify-content-between">
+                      <a href="#" class="btn btn-danger stretched-link">Explora nuestra línea de productos</a>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- Buttons -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -85,44 +101,113 @@
           </div>
         </div>
 
+
+
              <!-- section productos zafra-->
 
      <div class="container" id="productos-zafra">
         <h2>Los elegidos para esta zafra en salud animal</h2>
         <h3>Descubre los productos más destacados para garantizar el bienestar y rendimiento de tus animales en esta temporada.</h3>
-        <div class="cards">
-
-          
-          <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
+        
+        <div class="row">
+          <div class="col-md-4">
             <div class="card">
-                <div class="card-body">
-                    <img src="" alt="nombre de producto">
-                    <h5 class="card-title">Nombre del Producto</h5>
-                    <p class="card-text">Este un texto simplificado de una noticia</p>
-                    <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-secondary">Más información</a>
-                    </div>
+              <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+              <div class="card-body" style="border-top: 4px solid #CB1733;">
+                <h5 class="card-title">Nombre del Producto</h5>
+                <p class="card-text">Este un texto simplificado de una noticia</p>
+                <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-secondary stretched-link">Más información</a>
                 </div>
+              </div>
             </div>
-        </div>
 
-        <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
+      
+
             <div class="card">
-              <div class="card-body">
-                <img src="" alt="nombre de producto">
+              <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+              <div class="card-body " style="border-top: 4px solid #CB1733;">
                 <h5 class="card-title">Nombre del Producto</h5>
                 <p class="card-text">Este un texto simplificado de una noticia</p>
                 <div class="d-flex justify-content-between">
                     <a href="#" class="btn btn-secondary">Más información</a>
                 </div>
+              </div>
             </div>
+
+            <div class="card">
+              <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+              <div class="card-body" style="border-top: 4px solid #CB1733;">
+                <h5 class="card-title">Nombre del Producto</h5>
+                <p class="card-text">Este un texto simplificado de una noticia</p>
+                <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-secondary">Más información</a>
+                </div>
+              </div>
             </div>
+
+            <div class="card">
+              <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+              <div class="card-body" style="border-top: 4px solid #CB1733;">
+                <h5 class="card-title">Nombre del Producto</h5>
+                <p class="card-text">Este un texto simplificado de una noticia</p>
+                <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-secondary">Más información</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
+        <div class="row">
+
+          <div class="card d-flex flex-wrap justify-content-between">
+
+          
+            <div class="col-md-4 news-card " data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
+              <div class="card ">
+                  <div class="card-body">
+                    <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/averpas.jpg" class="card-img-top" alt="nombre de producto">
+                    <h5 class="card-title">Nombre del Producto</h5>
+                      <p class="card-text">Este un texto simplificado de una noticia</p>
+                      <div class="d-flex justify-content-between">
+                          <a href="#" class="btn btn-secondary">Más información</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
+              <div class="card">
+                <div class="card-body">
+                  <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+                  <h5 class="card-title">Nombre del Producto</h5>
+                  <p class="card-text">Este un texto simplificado de una noticia</p>
+                  <div class="d-flex justify-content-between">
+                      <a href="#" class="btn btn-secondary">Más información</a>
+                  </div>
+              </div>
+              </div>
+          </div>
+  
+          <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
+              <div class="card">
+                <div class="card-body">
+                  <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+                  <h5 class="card-title">Nombre del Producto</h5>
+                  <p class="card-text">Este un texto simplificado de una noticia</p>
+                  <div class="d-flex justify-content-between">
+                      <a href="#" class="btn btn-secondary">Más información</a>
+                  </div>
+              </div>
+              </div>
+          </div> 
+  
+          <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
             <div class="card">
               <div class="card-body">
-                <img src="" alt="nombre de producto">
+                <img src="https://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
                 <h5 class="card-title">Nombre del Producto</h5>
                 <p class="card-text">Este un texto simplificado de una noticia</p>
                 <div class="d-flex justify-content-between">
@@ -131,23 +216,13 @@
             </div>
             </div>
         </div> 
-
-        <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Zafra">
-          <div class="card">
-            <div class="card-body">
-              <img src="" alt="nombre de producto">
-              <h5 class="card-title">Nombre del Producto</h5>
-              <p class="card-text">Este un texto simplificado de una noticia</p>
-              <div class="d-flex justify-content-between">
-                  <a href="#" class="btn btn-secondary">Más información</a>
-              </div>
+  
+  
+  
           </div>
-          </div>
-      </div> 
-
-
-
         </div>
+        
+
 
      </div>
 
@@ -155,6 +230,6 @@
 
     
     
-
+     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js" type="module"></script>
 </html>
