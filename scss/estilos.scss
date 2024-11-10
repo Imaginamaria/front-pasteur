@@ -3,7 +3,7 @@
 $primary: #0F4486;
 $secondary: #CB1733;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap";
 
 
 
@@ -23,8 +23,34 @@ body{
   width: 250px;
 }
 
+// Estilo para el texto del menú de navegación
+.navbar .nav-link {
+  color: $primary !important; // Texto en color primario
+
+  &:hover {
+    color: $secondary !important; // Cambia a color secundario en hover
+  }
+}
+
+// Estilo para el botón de contacto
+.navbar .btn-outline-primary {
+  color: $primary; // Texto en color primario
+  border-color: $primary; // Borde en color primario
+
+  &:hover {
+    color: $secondary; // Cambia el texto a color secundario en hover
+    // background-color: white; // Fondo blanco en hover
+    border-color: $primary; // Mantén el borde en color primario
+  }
+}
+
 
 //  carrousel
+
+.mt-navbar {
+  margin-top: 156px; /* Ajusta este valor según la altura de tu navbar */
+}
+
 
 .carousel-item {
   height: 95vh; /* Ajusta esta altura */
@@ -45,9 +71,9 @@ body{
 
 .carousel-caption {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 40%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
     text-align: left;
     color: white;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
