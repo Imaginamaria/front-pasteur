@@ -1,28 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900&display=swap');
 
+$primary: #0F4486;
+$secondary: #CB1733;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
-$primary: #F2F2F2;
-$secondary: #F2F2F2;
+
 
 
 
 
 body{
-    background-color: $primary;
+    background-color: $light;
     font-family: 'Livvic', sans-serif;
 
+}
+
+//nav
+
+.navbar-brand img{
+  width: 250px;
 }
 
 
 //  carrousel
 
+.carousel-item {
+  height: 95vh; /* Ajusta esta altura */
+}
+
 .carousel-item img {
   height: 700px; /* Ajusta altura */
   object-fit: cover; /* Aseguro que la imagen se recorte y cubra el contenedor */
-  object-position: 0 40%; /* Controlo la ubicacion de imagen dentro del contenedor */
-
+  object-position: 0 50%; /* Controlo la ubicacion de imagen dentro del contenedor */
+  height: 100%;
 
 }
 
@@ -33,28 +45,26 @@ body{
 
 .carousel-caption {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 40%;
     transform: translate(-50%, -30%);
     text-align: left;
     color: white;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    z-index: 10; /* Aseguro que el texto quede visible encima de la imagen */
+    max-width: 80%; /* Evita que el texto se desborde */
 
   }
   .carousel-caption h2 {
     font-size: 3.5rem;
+    margin-bottom: 20px; /* Separación entre el título y el párrafo */
+
   }
   .carousel-caption p {
     font-size: 2rem;
   }
-  .carousel-item {
-    height: 80vh; /* Ajusta esta altura */
-  }
-  .carousel-item img {
-    height: 100%;
-    object-fit: cover;
-  }
-
+ 
+// card
 
   .card-text{
 
@@ -77,18 +87,37 @@ body{
 .card-border-top-thick {
   border-top-width: 4px; /* Ajusta el grosor a lo que necesites */
   border-top-style: solid; /* Asegura que el borde sea sólido */
-  border-top-color: #CB1733; /* Opcional: elige un color específico */
+  border-top-color: $secondary; /* Opcional: elige un color específico */
 }
 
+// screen media
 
 @media (max-width: 768px) {
 
-  .carousel-caption {
-    left: 5%; /* O ajusta el valor*/
-    font-size: 1.5rem; /* Reduzco el tamaño del texto en pantallas pequeñas */
+  .navbar-brand img{
+    width: 150px;
+  }
+
+
+  .carousel-caption h2 {
+    font-size: 1.5rem; /* Reduzco el tamaño del texto para pantallas pequeñas */
+    top: 30%; /* Ajusta la posición en pantallas más pequeñas */
+    left: 50%; /* Asegura que se mantenga centrado */
+    transform: translateX(-50%); /* Asegura el centrado */
+    max-width: 80%; /* Limita el ancho para que no se salga */
+  }
+
+  .carousel-caption p {
+    font-size: 1.2rem; /* Ajusto el tamaño del párrafo para pantallas pequeñas */
+    margin-top: 10px; /* Agrega un poco de espacio entre el texto */
   }
 
   .carousel-item img {
-    height: 450px; /* Ajusta para pantallas pequeñas */
+    height: 550px; /* Ajusta para pantallas pequeñas */
+  }
+
+  .carousel-caption .btn {
+    font-size: 1rem; /* Reduzco el tamaño del botón */
+    padding: 10px 20px; /* Aseguro que el botón sea más pequeño */
   }
 }
