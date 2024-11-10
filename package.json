@@ -4,16 +4,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass --no-source-map scss:css",   
+    "build": "sass --no-source-map scss:css",
     "watch": "sass --no-source-map --watch scss:css",
     "borrarCss": "del css/estilos.min.css"
-    
   },
   "author": "",
   "license": "ISC",
   "type": "module",
   "description": "",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
     "bootstrap": "^5.3.3",
     "sass": "^1.80.5"
   }
