@@ -34,8 +34,15 @@ body {
 }
 
 .navbar{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-  box-shadow: 3px 3px 8px rgba(98, 98, 98, 0.5); ;
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-sticky {
+  opacity: 0.9;
 }
 
 // Carousel
@@ -150,6 +157,10 @@ body {
   border-top-color: $secondary;
 }
 
+.card {
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
 // Ajustes para pantallas pequeñas
 @media (max-width: 768px) {
   .carousel-caption {
@@ -183,6 +194,13 @@ body {
 .zafra-group .card {
   width: 100%;
 
+}
+
+// chinfield section
+
+.chinfield{
+  border-radius: 5px;
+  max-width: 100%;
 }
 
 @media (max-width: 1000px) {

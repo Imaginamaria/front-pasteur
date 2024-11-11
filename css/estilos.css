@@ -13062,7 +13062,15 @@ body {
 }
 
 .navbar {
-  box-shadow: 3px 3px 8px rgba(98, 98, 98, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-sticky {
+  opacity: 0.9;
 }
 
 .mt-navbar {
@@ -13165,6 +13173,10 @@ body {
   border-top-color: #CB1733;
 }
 
+.card {
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
 @media (max-width: 768px) {
   .carousel-caption {
     top: 50%;
@@ -13190,6 +13202,11 @@ body {
 }
 .zafra-group .card {
   width: 100%;
+}
+
+.chinfield {
+  border-radius: 5px;
+  max-width: 100%;
 }
 
 @media (max-width: 1000px) {
