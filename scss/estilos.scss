@@ -5,145 +5,192 @@ $secondary: #CB1733;
 
 @import "bootstrap";
 
-
-
-
-
-
-
-body{
+body {
     background-color: $light;
     font-family: 'Livvic', sans-serif;
-
 }
 
-//nav
-
-.navbar-brand img{
+// Nav
+.navbar-brand img {
   width: 250px;
 }
 
-// Estilo para el texto del menú de navegación
 .navbar .nav-link {
-  color: $primary !important; // Texto en color primario
+  color: $primary !important;
 
   &:hover {
-    color: $secondary !important; // Cambia a color secundario en hover
+    color: $secondary !important;
   }
 }
 
-// Estilo para el botón de contacto
 .navbar .btn-outline-primary {
-  color: $primary; // Texto en color primario
-  border-color: $primary; // Borde en color primario
+  color: $primary;
+  border-color: $primary;
 
   &:hover {
-    color: $secondary; // Cambia el texto a color secundario en hover
-    // background-color: white; // Fondo blanco en hover
-    border-color: $primary; // Mantén el borde en color primario
+    color: $secondary;
+    border-color: $primary;
   }
 }
 
-
-//  carrousel
-
+// Carousel
 .mt-navbar {
-  margin-top: 156px; /* Ajusta este valor según la altura de tu navbar */
+  margin-top: 156px;
 }
-
 
 .carousel-item {
-  height: 95vh; /* Ajusta esta altura */
+  height: 95vh;
+}
+
+.carousel-title h2 {
+  width: 100%;
 }
 
 .carousel-item img {
-  height: 700px; /* Ajusta altura */
-  object-fit: cover; /* Aseguro que la imagen se recorte y cubra el contenedor */
-  object-position: 0 50%; /* Controlo la ubicacion de imagen dentro del contenedor */
+  height: 700px;
+  object-fit: cover;
+  object-position: 0 50%;
   height: 100%;
-
 }
 
-/* Ajusta la altura del contenedor del carousel */
 .carousel-inner {
-  max-height: 700px; /* Ajusto el valor para controlar la altura */
+  max-height: 800px;
 }
 
 .carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    color: white;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
-    z-index: 10; /* Aseguro que el texto quede visible encima de la imagen */
-    max-width: 80%; /* Evita que el texto se desborde */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Centra el texto horizontalmente */
+  color: white;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+  z-index: 10; /* Asegura que el texto quede visible encima de la imagen */
+  max-width: 90%; /* Evita que el texto se desborde */
+}
 
+.carousel-caption h2 {
+  font-size: 3.5rem;
+  margin: 0 auto;
+  text-align: center; /* Alinea el h2 al centro */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-bottom: 15px; /* Separación entre el párrafo y el botón */
+  text-align: center;
+}
+
+
+.carousel-caption .btn {
+  font-size: 1rem;
+  margin-top: 10px; /* Espacio entre el botón y el párrafo */
+  margin: 0 auto;
+  display: block;
+}
+
+// Zafra
+
+.titulo-zafra {
+  width: 70%;
+  padding-bottom: 10px;
+}
+
+.titulo-zafra h1{
+  border-bottom: solid 8px $secondary ;
+  padding-bottom: 20px;
+
+}
+
+.titulo-zafra h3{
+  padding-top: 10px;
+
+}
+
+// Card
+.zafra-group{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.zafra-group .card{
+  width: 100%;
+  max-width: 320px; /* Puedes ajustar este valor según lo que necesites */
+  margin-bottom: 20px;
+  line-height: 1.8rem;
+
+}
+
+
+.card-text {
+  .text-truncate-3-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .carousel-caption h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px; /* Separación entre el título y el párrafo */
-
-  }
-  .carousel-caption p {
-    font-size: 2rem;
-  }
- 
-// card
-
-  .card-text{
-
-    .text-truncate-3-lines {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-
-      
 }
 
 .card-img-top {
-    height: 200px; /* Ajustar altura  */
-    object-fit: cover; /* imagen se recorte correctamente */
+  object-fit: cover;
 }
 
 .card-border-top-thick {
-  border-top-width: 4px; /* Ajusta el grosor a lo que necesites */
-  border-top-style: solid; /* Asegura que el borde sea sólido */
-  border-top-color: $secondary; /* Opcional: elige un color específico */
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: $secondary;
 }
 
-// screen media
-
+// Ajustes para pantallas pequeñas
 @media (max-width: 768px) {
-
-  .navbar-brand img{
-    width: 150px;
+  .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    text-align: center;
   }
 
-
   .carousel-caption h2 {
-    font-size: 1.5rem; /* Reduzco el tamaño del texto para pantallas pequeñas */
-    top: 30%; /* Ajusta la posición en pantallas más pequeñas */
-    left: 50%; /* Asegura que se mantenga centrado */
-    transform: translateX(-50%); /* Asegura el centrado */
-    max-width: 80%; /* Limita el ancho para que no se salga */
+    font-size: 2.5rem; /* Ajuste de tamaño */
+    margin-bottom: 10px; /* Ajusta el espacio debajo del título */
   }
 
   .carousel-caption p {
-    font-size: 1.2rem; /* Ajusto el tamaño del párrafo para pantallas pequeñas */
-    margin-top: 10px; /* Agrega un poco de espacio entre el texto */
-  }
-
-  .carousel-item img {
-    height: 550px; /* Ajusta para pantallas pequeñas */
+    font-size: 1rem;
   }
 
   .carousel-caption .btn {
-    font-size: 1rem; /* Reduzco el tamaño del botón */
-    padding: 10px 20px; /* Aseguro que el botón sea más pequeño */
+    font-size: 0.9rem;
+    padding: 8px 16px; /* Ajusta el tamaño del botón */
+  }
+
+  .navbar-brand img {
+    width: 200px; /* Redimensiona logo en pantallas pequeñas */
+  }
+}
+
+
+.zafra-group .card {
+  width: 100%;
+
+}
+
+@media (max-width: 1000px) {
+  .carousel-caption h2 {
+    font-size: 2.5rem; /* Ajuste de tamaño en pantallas medianas */
+    margin-bottom: 10px;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 1rem;
   }
 }

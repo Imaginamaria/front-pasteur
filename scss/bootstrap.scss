@@ -5,7 +5,9 @@ $dark: #0A2F5B;
 // Navbar
 $navbar-padding-y: 1rem;
 $navbar-light-color:$primary;
-$navbar-light-hover-color:$secondary;
+$navbar-light-hover-color:#fff;
+
+
 
 
 // Buttons
@@ -35,6 +37,9 @@ $spacers: (
   7: $spacer * 8,
   8: $spacer * 12,
 ) !default;
+
+$line-height-base: 1.7;
+$headings-margin-bottom: $spacer * 1;
 
 
 //Fonts
