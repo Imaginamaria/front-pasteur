@@ -35,18 +35,16 @@ body {
 
 .navbar{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.navbar {
   transition: all 0.5s ease-in-out;
 }
+
 
 .navbar-sticky {
   opacity: 0.9;
 }
 
 // Carousel
-.mt-navbar {
+.mt-navbar .vademcum .productos-relacionados {
   margin-top: 156px;
 }
 
@@ -76,7 +74,6 @@ body {
   transform: translate(-50%, -50%);
   text-align: center; /* Centra el texto horizontalmente */
   color: white;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
   z-index: 10; /* Asegura que el texto quede visible encima de la imagen */
   max-width: 90%; /* Evita que el texto se desborde */
 }
@@ -159,6 +156,8 @@ body {
 
 .card {
   margin-bottom: 20px; /* Espaciado inferior */
+  box-shadow: 0 0 10px rgba(189, 189, 189, 0.5);
+  border: none;
 }
 
 // Ajustes para pantallas pequeñas
@@ -201,6 +200,52 @@ body {
 .chinfield{
   border-radius: 5px;
   max-width: 100%;
+}
+
+.titulo-chinfield h2{
+  border-bottom: solid 8px $primary ;
+  padding-bottom: 20px;
+
+}
+
+
+// vademecum
+
+#vademecum  {
+  margin-top: 210px;
+}
+
+.titulo-vademecum{
+
+  width: 70%;
+  padding-bottom: 10px;
+
+}
+
+.titulo-vademecum h1{
+  border-bottom: solid 8px $secondary ;
+  padding-bottom: 20px;
+  
+
+}
+
+// productos
+#productos {
+  margin-top: 210px;
+}
+
+
+
+.titulo-productos {
+  width: 70%;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.titulo-productos h1{
+  border-bottom: solid 8px $secondary ;
+  padding-bottom: 20px;
+
 }
 
 @media (max-width: 1000px) {
