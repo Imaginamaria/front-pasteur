@@ -13070,8 +13070,8 @@ body {
   opacity: 0.9;
 }
 
-.mt-navbar .vademcum .productos-relacionados {
-  margin-top: 156px;
+.hero {
+  margin-top: 160px; /* Ajusta este valor según la altura de tu navbar */
 }
 
 .carousel-item {
@@ -13083,14 +13083,13 @@ body {
 }
 
 .carousel-item img {
-  height: 700px;
   object-fit: cover;
-  object-position: 0 50%;
+  object-position: center center;
   height: 100%;
 }
 
 .carousel-inner {
-  max-height: 800px;
+  max-height: 700px;
 }
 
 .carousel-caption {
@@ -13101,7 +13100,7 @@ body {
   text-align: center; /* Centra el texto horizontalmente */
   color: white;
   z-index: 10; /* Asegura que el texto quede visible encima de la imagen */
-  max-width: 90%; /* Evita que el texto se desborde */
+  max-width: 100%; /* Evita que el texto se desborde */
 }
 
 .carousel-caption h2, .carousel-caption .h2 {
@@ -13177,8 +13176,6 @@ body {
 
 @media (max-width: 768px) {
   .carousel-caption {
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     max-width: 90%;
     text-align: center;
@@ -13252,4 +13249,9 @@ body {
   .carousel-caption .btn {
     font-size: 1rem;
   }
+}
+.carousel-item img {
+  object-fit: cover;
+  object-position: 40 6%;
+  height: 100%;
 }
