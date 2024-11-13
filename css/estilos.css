@@ -13174,6 +13174,11 @@ body {
   border: none;
 }
 
+.titulo-empresa h2, .titulo-empresa .h2 {
+  border-bottom: solid 8px #0F4486;
+  padding-bottom: 20px;
+}
+
 @media (max-width: 768px) {
   .carousel-caption {
     transform: translate(-50%, -50%);
