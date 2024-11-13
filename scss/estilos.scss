@@ -180,6 +180,18 @@ body {
 }
 
 
+.footer-contenido{
+  
+  flex-direction: column;
+  margin: auto;
+
+}
+
+.footer-contenido .redes,
+.footer-contenido .newsletter {
+    text-align: center; /* Centra el texto dentro de estas secciones */
+}
+
 
 .pie-de-pagina div{
   border-top: solid 4px $secondary;
@@ -237,6 +249,24 @@ body {
   padding-bottom: 20px;
 
 }
+
+// empresa
+
+.footer-contenido {
+  flex-direction: row; /* Cambia a fila en pantallas más grandes */
+}
+
+.social-container .social-icon i {
+  font-size: 1.8rem; /* Ajusta el tamaño según prefieras */
+  transition: color 0.3s ease;
+}
+
+.social-container .social-icon:hover i {
+  color: var(--bs-secondary); /* Usa el color de Bootstrap $secondary */
+}
+
+
+
 
 
 // vademecum
