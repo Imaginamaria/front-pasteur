@@ -172,6 +172,19 @@ body {
 
 }
 
+
+// Footer
+.footer{
+  color: white;
+  padding: 20px;
+}
+
+
+
+.pie-de-pagina div{
+  border-top: solid 4px $secondary;
+}
+
 // Ajustes para pantallas pequeñas
 @media (max-width: 768px) {
   .carousel-caption {
@@ -205,6 +218,11 @@ body {
 .zafra-group .card {
   width: 100%;
 
+}
+
+.titulo-zafra {
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 // chinfield section

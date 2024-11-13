@@ -13179,6 +13179,15 @@ body {
   padding-bottom: 20px;
 }
 
+.footer {
+  color: white;
+  padding: 20px;
+}
+
+.pie-de-pagina div {
+  border-top: solid 4px #CB1733;
+}
+
 @media (max-width: 768px) {
   .carousel-caption {
     transform: translate(-50%, -50%);
@@ -13202,6 +13211,11 @@ body {
 }
 .zafra-group .card {
   width: 100%;
+}
+
+.titulo-zafra {
+  width: 100%;
+  padding-bottom: 10px;
 }
 
 .chinfield {
