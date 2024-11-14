@@ -289,6 +289,19 @@ body {
 
 }
 
+.especies img{
+
+  box-shadow: 0 0 10px rgba(189, 189, 189, 0.5);
+  border: none;
+  padding: 20px;
+  border-radius: 50%;  /* Aplica el contorno circular */
+  object-fit: cover;   /* Centra la imagen dentro del contorno redondo */
+
+  margin: 10px; /* Espacio entre las imágenes */
+  max-width: 100px; /* Ajusta el tamaño máximo si es necesario */
+
+}
+
 // productos
 #productos {
   margin-top: 210px;
