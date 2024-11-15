@@ -18,5 +18,6 @@
     "modules": "^0.4.0",
     "node": "^18.20.5",
     "sass": "^1.80.5"
-  }
+  },
+  "devDependencies": {}
 }

@@ -7,7 +7,8 @@ $navbar-padding-y: 1rem;
 $navbar-light-color:$primary;
 $navbar-light-hover-color:#fff;
 
-
+$link-hover-color: $secondary;
+$btn-primary-hover-bg: darken($primary, 10%);
 
 
 // Buttons
@@ -44,5 +45,15 @@ $headings-margin-bottom: $spacer * 1;
 
 //Fonts
 $font-family-sans-serif: 'Livvic', sans-serif;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

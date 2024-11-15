@@ -53,10 +53,6 @@ body {
   margin-top: 160px; /* Ajusta este valor según la altura de tu navbar */
 }
 
-// .mt-navbar .vademcum .productos-relacionados {
-//   margin-top: 156px;
-// }
-
 
 
 .carousel-item {
@@ -141,6 +137,7 @@ body {
   max-width: 320px; /* Puedes ajustar este valor según lo que necesites */
   margin-bottom: 20px;
   line-height: 1.8rem;
+  
 
 }
 
@@ -203,15 +200,18 @@ body {
 }
 
 
-.pie-de-pagina div{
-  border-top: solid 4px $secondary;
+
+
+.pie-pagina div {
+  border-top: solid 2px $secondary;
 }
 
-
-.zafra-group .card {
-  width: 100%;
-
+.pie-pagina p {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
 }
+
 
 .titulo-zafra {
   width: 100%;

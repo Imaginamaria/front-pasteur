@@ -96,8 +96,8 @@
   --bs-link-color: #0F4486;
   --bs-link-color-rgb: 15, 68, 134;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: rgb(12, 54.4, 107.2);
-  --bs-link-hover-color-rgb: 12, 54, 107;
+  --bs-link-hover-color: #CB1733;
+  --bs-link-hover-color-rgb: 203, 23, 51;
   --bs-code-color: #d63384;
   --bs-highlight-color: #212529;
   --bs-highlight-bg: rgb(255, 242.6, 205.4);
