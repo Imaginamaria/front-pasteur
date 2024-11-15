@@ -13045,8 +13045,12 @@ body {
   width: 250px;
 }
 
+.navbar-brand-iso img {
+  width: 100px;
+}
+
 .navbar .nav-link {
-  color: #0F4486 !important;
+  color: #0F4486;
 }
 .navbar .nav-link:hover {
   color: #CB1733 !important;
@@ -13185,40 +13189,22 @@ body {
 }
 
 .footer-contenido {
-  flex-direction: column;
   margin: auto;
 }
 
 .footer-contenido .redes,
 .footer-contenido .newsletter {
-  text-align: center; /* Centra el texto dentro de estas secciones */
+  text-align: left;
+}
+
+#iso-footer {
+  width: 130px;
 }
 
 .pie-de-pagina div {
   border-top: solid 4px #CB1733;
 }
 
-@media (max-width: 768px) {
-  .carousel-caption {
-    transform: translate(-50%, -50%);
-    max-width: 90%;
-    text-align: center;
-  }
-  .carousel-caption h2, .carousel-caption .h2 {
-    font-size: 2.5rem; /* Ajuste de tamaño */
-    margin-bottom: 10px; /* Ajusta el espacio debajo del título */
-  }
-  .carousel-caption p {
-    font-size: 1rem;
-  }
-  .carousel-caption .btn {
-    font-size: 0.9rem;
-    padding: 8px 16px; /* Ajusta el tamaño del botón */
-  }
-  .navbar-brand img {
-    width: 200px; /* Redimensiona logo en pantallas pequeñas */
-  }
-}
 .zafra-group .card {
   width: 100%;
 }
@@ -13242,8 +13228,12 @@ body {
   flex-direction: row; /* Cambia a fila en pantallas más grandes */
 }
 
+.social-container {
+  gap: 12px;
+}
+
 .social-container .social-icon i {
-  font-size: 1.8rem; /* Ajusta el tamaño según prefieras */
+  font-size: 40px; /* Ajusta el tamaño según prefieras */
   transition: color 0.3s ease;
 }
 
@@ -13290,7 +13280,43 @@ body {
   padding-bottom: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+  #navbarNavDropdown {
+    background-color: #0F4486;
+    text-align: center;
+  }
+  .navbar .nav-link {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.199);
+  }
+  .carousel-caption {
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    text-align: center;
+  }
+  .carousel-caption h2, .carousel-caption .h2 {
+    font-size: 0.8rem; /* Ajuste de tamaño */
+    margin-bottom: 10px; /* Ajusta el espacio debajo del título */
+  }
+  .carousel-caption a {
+    width: 80%;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px; /* Ajusta el tamaño del botón */
+  }
+  .navbar-brand img {
+    width: 200px; /* Redimensiona logo en pantallas pequeñas */
+  }
+  .footer-contenido .redes,
+  .footer-contenido .newsletter {
+    text-align: center; /* Centra el texto dentro de estas secciones */
+  }
+}
+@media (max-width: 1200px) {
   .carousel-caption h2, .carousel-caption .h2 {
     font-size: 2.5rem; /* Ajuste de tamaño en pantallas medianas */
     margin-bottom: 10px;
@@ -13304,6 +13330,6 @@ body {
 }
 .carousel-item img {
   object-fit: cover;
-  object-position: 40 6%;
+  object-position: 40% 6%;
   height: 100%;
 }

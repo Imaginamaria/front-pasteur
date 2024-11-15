@@ -16,8 +16,10 @@
 <body>
       <!-- Navbar -->
         <nav class="navbar navbar-expand-md fixed-top bg-light">
-            <div class="container mt-4 mb-4">
-              <a href="index.html" class="navbar-brand"><img src="img/logo-laboratorios-pasteur.png" alt="Laboratorios Pasteur Logo" ></a>
+            <div class="container mt-lg-4 mb-lg-4">
+            <a href="index.html" class="navbar-brand-iso d-md-none"><img src="img/iso-laboratorios-pasteur.png" alt="Laboratorios Pasteur Logo" ></a>
+              <a href="index.html" class="navbar-brand d-none d-lg-block "><img src="img/logo-laboratorios-pasteur.png" alt="Laboratorios Pasteur Logo" ></a>
+
 
               <!-- hamburguesa -->
               <button
@@ -65,9 +67,9 @@
                           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                       </div>
                       <div class="carousel-inner">
-                          <div class="carousel-item active d-item">
-                              <img src="img/banner-rodeo-pasteur.jpg" class="d-block w-100 d-img img-fluid" alt="sanidad pasteur para su rodeo">
-                              <div class="carousel-caption d-none d-sm-block text-center">
+                          <div class="carousel-item active d-item item-1">
+                              <!--<img src="img/banner-rodeo-pasteur.jpg" class="d-block w-100 d-img img-fluid" alt="sanidad pasteur para su rodeo">-->
+                              <div class="carousel-caption  d-sm-block text-center">
                                   <h2 class="carousel-title display-4 fw-semibold">Innovación y excelencia en productos veterinarios</h2>
                                   <div class="d-flex justify-content-center">
                                       <a href="#" class="btn btn-secondary btn-lg stretched-link mt-3 fw-semibold">Explora nuestra línea de productos</a>
@@ -76,7 +78,7 @@
                           </div>
                           <div class="carousel-item d-item">
                               <img src="img/banner-rodeo-ovejas-pasteur.jpg" class="d-block w-100 d-img img-fluid" alt="sanidad pasteur para ovinos">
-                              <div class="carousel-caption d-none d-md-block text-center">
+                              <div class="carousel-caption  d-md-block text-center">
                                   <h2 class="display-4 fw-semibold">Comprometidos con el futuro de la salud animal</h2>
                                   <div class="d-flex justify-content-center">
                                       <a href="#" class="btn btn-secondary btn-lg stretched-link mt-3 fw-semibold">Explora nuestra línea de productos</a>
@@ -85,7 +87,7 @@
                           </div>
                           <div class="carousel-item d-item">
                               <img src="img/banner-rodeo-borregos-pasteur.jpg" class="d-block w-100 d-img img-fluid" alt="sanidad pasteur para borregos">
-                              <div class="carousel-caption d-none d-md-block text-center">
+                              <div class="carousel-caption  d-md-block text-center">
                                   <h2 class="display-4 fw-semibold">Innovación constante, resultados comprobados</h2>
                                   <div class="d-flex justify-content-center">
                                       <a href="#" class="btn btn-secondary btn-lg stretched-link mt-3 fw-semibold">Explora nuestra línea de productos</a>
@@ -308,25 +310,34 @@
 
        <footer class="bg-dark text-white footer">
         <div class="container">
-            <div class="footer-contenido row d-flex justify-content-between g-5">
+            <div class="footer-contenido row d-flex align-items-end my-4">
                 <!-- Logo -->
-                <div class="col-12 col-md-2 text-center text-md-start">
-                    <div class="image-container py-2">
+                <div class="col-12 col-md-3 text-left text-md-start px-3">
+                    <div class="image-container mt-0">
                         <a href="index.html">
-                            <img src="/img/iso-laboratorios-pasteur-fondo-blanco.png" alt="Laboratorios Pasteur" class="iso-footer img-fluid">
+                            <img src="/img/iso-laboratorios-pasteur-fondo-blanco.png" alt="Laboratorios Pasteur" class="img-fluid" id="iso-footer">
                         </a>
+                        <p><strong>Laboratorios Pasteur S.A.</strong> <br>
+                            Comprometidos con la salud y bienestar animal.</p>
+                        <p>Teléfono: +598.751.516 <br>
+                            E-mail: info@laboratoriospasteur.com</p>
                     </div>
                 </div>
-    
-                <!-- Redes Sociales y Newsletter -->
-                <div class="col-12 col-md-8 text-center text-md-start d-flex flex-column flex-md-row justify-content-between">
+                
+                <div class="col-12 col-md-2 text-left text-md-start  px-3">
                     <div class="redes mb-4 mb-md-0">
-                        <div class="social-container">
+                        <div class="social-container d-flex ">
                             <a href="https://www.instagram.com/laboratoriospasteur.uy" target="_blank" class="social-icon"> <i class="fab fa-instagram text-white"></i></a>
                             <a href="https://www.facebook.com/laboratoriospasteururuguay/" target="_blank" class="social-icon"><i class="fab fa-facebook text-white"></i></a>
                         </div>
-                        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y productos.</p>
+                        <p class="text-left">Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y productos.</p>
                     </div>
+
+                </div>
+    
+                <!-- Redes Sociales y Newsletter -->
+                <div class="col-12 col-md-5 text-left text-md-start px-3 d-flex flex-column flex-md-row justify-content-between">
+
     
                     <div class="newsletter text-center text-md-start">
                         <h6 class="fw-bold">Manténgase informado</h6>
@@ -341,7 +352,7 @@
                 </div>
     
                 <!-- Logos adicionales -->
-                <div class="col-12 col-md-2 text-center text-md-end">
+                <div class="col-12 col-md-2 text-left text-md-end  px-3">
                     <div class="image-container py-3">
                         <a href="https://www.cev.uy/planes-de-gestion">
                             <img src="/img/logo-plesem.png" alt="Plesem Laboratorios Pasteur" class="img-fluid mb-2" style="width: 200px;">
