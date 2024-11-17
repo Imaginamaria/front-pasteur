@@ -13074,6 +13074,25 @@ body {
   opacity: 0.9;
 }
 
+a {
+  color: #0F4486;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #CB1733;
+  text-decoration: none;
+}
+
+.breadcrumb-item a {
+  color: #0F4486;
+  text-decoration: none;
+}
+.breadcrumb-item a:hover {
+  color: #CB1733;
+  font-weight: semibold;
+}
+
 .hero {
   margin-top: 160px; /* Ajusta este valor según la altura de tu navbar */
 }
@@ -13179,7 +13198,7 @@ body {
 }
 
 .titulo-empresa h2, .titulo-empresa .h2 {
-  border-bottom: solid 8px #0F4486;
+  border-bottom: solid 8px #CB1733;
   padding-bottom: 20px;
 }
 
@@ -13201,6 +13220,18 @@ body {
   width: 130px;
 }
 
+.social-icon a {
+  color: white;
+}
+
+.social-icon a:hover {
+  color: #CB1733;
+}
+
+.social-icon a:focus {
+  color: #CB1733;
+}
+
 .pie-pagina div {
   border-top: solid 2px #CB1733;
 }
@@ -13209,11 +13240,6 @@ body {
   margin: 0;
   padding: 20px 0;
   text-align: center;
-}
-
-.titulo-zafra {
-  width: 100%;
-  padding-bottom: 10px;
 }
 
 .chinfield {
@@ -13235,7 +13261,7 @@ body {
 }
 
 .social-container .social-icon i {
-  font-size: 40px; /* Ajusta el tamaño según prefieras */
+  font-size: 40px; /* Ajusta el tamaño */
   transition: color 0.3s ease;
 }
 
@@ -13257,14 +13283,42 @@ body {
   padding-bottom: 20px;
 }
 
+.filtros-especies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.especies {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.especies .img-container {
+  border-radius: 50%; /* Redondea el contenedor */
+  overflow: hidden; /* Oculta lo que se desborda del contenedor */
+  padding: 30px; /* Aplica el padding solo al contenedor */
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave al contenedor */
+}
+
 .especies img {
-  box-shadow: 0 0 10px rgba(189, 189, 189, 0.5);
-  border: none;
-  padding: 20px;
-  border-radius: 50%; /* Aplica el contorno circular */
-  object-fit: cover; /* Centra la imagen dentro del contorno redondo */
-  margin: 10px; /* Espacio entre las imágenes */
-  max-width: 100px; /* Ajusta el tamaño máximo si es necesario */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarse */
+  width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+  height: 100%; /* Lo mismo para la altura */
+  border: none; /* Elimina el borde por defecto */
+}
+
+.especies:hover img {
+  transform: scale(1.05); /* Efecto hover */
 }
 
 #productos {
@@ -13313,9 +13367,31 @@ body {
   .navbar-brand img {
     width: 200px; /* Redimensiona logo en pantallas pequeñas */
   }
+  .especies .img-container {
+    padding: 20px; /* Aplica el padding solo al contenedor */
+    margin: 15px;
+  }
+  .titulo-vademecum {
+    width: 100%;
+  }
   .footer-contenido .redes,
   .footer-contenido .newsletter {
     text-align: center; /* Centra el texto dentro de estas secciones */
+  }
+  .footer-contenido {
+    text-align: center;
+  }
+  .footer-contenido h6, .footer-contenido .h6 {
+    font-size: 0.8rem;
+  }
+  .footer-contenido p {
+    font-size: 0.8rem;
+  }
+  .footer-contenido ::placeholder {
+    font-size: 0.8rem;
+  }
+  .footer-contenido .btn {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 1200px) {
@@ -13332,6 +13408,6 @@ body {
 }
 .carousel-item img {
   object-fit: cover;
-  object-position: 40% 6%;
+  object-position: 40% 40%;
   height: 100%;
 }
