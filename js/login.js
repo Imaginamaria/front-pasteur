@@ -1,9 +1,9 @@
 import { obtenerValorInput , imprimir, validarSesion } from "../utils/functions.js";
-import { RequestsAPI } from "../RequestsAPI.js";
+import { RequestsAPI } from "../RequestaAPI.js";
 
 
 // validamos la sesion del usuario
-validarSesion();
+//validarSesion();
 
 // obtenemos el boton de login
 const botonLogin = document.querySelector("#form-login-submit");

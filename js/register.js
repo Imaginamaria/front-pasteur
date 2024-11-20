@@ -4,10 +4,10 @@ import {
     obtenerValorInput,
     imprimir,
   } from "../utils/functions.js";
-  import { RequestsAPI } from "../RequestsAPI.js";
+  import { RequestsAPI } from "../RequestaAPI.js";
   
   // validamos la sesion del usuario
-  validarSesion();
+ // validarSesion();
   
   // evento click para registrar un nuevo usuario
   document
