@@ -7,9 +7,9 @@ import { imprimir,
  } from "../utils/functions.js";
 
  // validamos la sesión del usuario
-//validarSesion();
+validarSesion();
 // agregamos evento click al botón de cerrar sesión
-//eventoClickCerrarSesion();
+eventoClickCerrarSesion();
 
 // function para mostrar las cards de productos
 
@@ -40,7 +40,7 @@ const mostrarCardProductos =(data) =>{
             producto.lineaterapeutica,
             producto.marca,
             producto.precio
-         ).mostrarCardProductos()
+         ).mostrarCard()
      )).join("");
 
      // imprimimos la card de producto en el elemento con id productosContainer

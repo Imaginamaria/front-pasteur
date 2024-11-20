@@ -3,7 +3,7 @@ import { RequestsAPI } from "../RequestaAPI.js";
 
 
 // validamos la sesion del usuario
-//validarSesion();
+validarSesion();
 
 // obtenemos el boton de login
 const botonLogin = document.querySelector("#form-login-submit");

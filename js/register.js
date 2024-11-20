@@ -7,7 +7,7 @@ import {
   import { RequestsAPI } from "../RequestaAPI.js";
   
   // validamos la sesion del usuario
- // validarSesion();
+validarSesion();
   
   // evento click para registrar un nuevo usuario
   document

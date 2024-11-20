@@ -68,4 +68,48 @@ export class RequestsAPI{
        .then(procesarRespuesta)
        .catch(manejarErrores);
    }
+
+
+ 
+
+
+// get /usuario
+
+ static getProductos(opciones={}){
+    // queryParams es un objeto que contiene los parámetros de la url, en este caso, los filtros de nombre y linea terapeutica.
+    const queryParams = new URLSearchParams({});
+
+    // nombre del producto
+    if(opciones.filtroNombre){
+        queryParams.append("nombre", opciones.filtroNombre);
+    }
+    // linea terapeutica
+    if(opciones.filtroLineaTerapeutica){
+        queryParams.append("lineaTerapeutica", opciones.filtroLineaTerapeutica);
+    }
+
+    // filtro especie
+    if(opciones.filtroEspecie){
+        queryParams.append("especie", opciones.filtroEspecie);
+    }
+
+    // filtro marca
+    if(opciones.filtroMarca){
+        queryParams.append("marca", opciones.filtroMarca);
+    }
+
+    return fetch(obtenerUrl(`productos?${queryParams}`), { headers })
+    .then(procesarRespuesta)
+    .catch(manejarErrores);
 }
+
+    // get /producto/:idProducto
+    static getProducto(idProducto) {
+    return fetch(obtenerUrl(`producto/${idProducto}`), { headers })
+    .then(procesarRespuesta)
+    .catch(manejarErrores);
+    }
+}
+
+
+
