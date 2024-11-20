@@ -47,7 +47,12 @@
                 <a href="novedades.html" class="nav-link fw-semibold">NOVEDADES</a>
               </li>
               <li class="nav-item">
-                <a href="contacto.html" class="nav-link btn btn-outline-primary border border-primary fw-semibold px-4 mx-4">CONTACTO</a>
+                <a href="contacto.html" class="nav-link fw-semibold">CONTACTO</a>
+              </li>
+              <li class="nav-item">
+                <a href="login.html" class="nav-link btn btn-outline-primary border fw-semibold px-4 mx-4 custom-border">
+                    <i class="fas fa-user"></i>
+                  </a>
               </li>
             </ul>
           </div>
@@ -209,19 +214,15 @@
 
 
 
-        <!-- section noticia -->
-        <section id="noticia" class="p5 bg-light text-dark"> 
+        <!-- section vademecum -->
+        <section id="vademecum" class="p5 bg-light text-dark"> 
 
             <div class="container mt-5 pt-3 ">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    
-                    <a href="crear-articulo.html" class="btn btn-primary" id="boton-crear-articulo">Crear Nueva Noticia</a>
-                    
-                </div>
+ 
         
                 <div class="form-row pt-3">
                     <div class="form-group col-md-8">
-                        <input type="text" class="form-control" id="input-filtro-titulo" placeholder="Filtrar por titulo">
+                        <input type="text" class="form-control" id="input-filtro-titulo" placeholder="Filtrar por nombre de producto">
                     </div>
     
                     <div class="form-group col-md-8 pt-2">
@@ -248,69 +249,75 @@
     
                     <div class="form-group col-md-8 pt-3">
                         
-                        <input type="button" class="btn btn-secondary" id="boton-filtro" value="Filtrar Noticia" />
+                        <input type="button" class="btn btn-secondary" id="boton-filtro" value="Filtrar Productos" />
     
                     </div>
                 </div>
         
-                <div id="newsContainer" class="row pt-3 pb-3">
+                <div id="productosContainer" class="row pt-3 pb-3">
                     <!-- Aqui se ven las cards de productos -->
                     <!-- ejemplo de 4 cards
-                     <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Hockey">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Titulo de noticia 1</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">27 Junio 2024</h6>
-                                <p class="card-text">Este un texto simplificado de una noticia</p>
-                                <div class="d-flex justify-content-between">
-                                    <a href="#" class="btn btn-secondary">Editar</a>
-                                    <a href="#" class="btn btn-danger">Borrar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Hockey">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Titulo de noticia 2</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">27 Junio 2024</h6>
-                                <p class="card-text">Este un texto simplificado de una noticia</p>
-                                <div class="d-flex justify-content-between">
-                                    <a href="#" class="btn btn-secondary">Editar</a>
-                                    <a href="#" class="btn btn-danger">Borrar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-4 news-card" data-name="Ejemplo News" data-date="2023-06-27" data-category="Hockey">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Titulo de noticia 3</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">27 Junio 2024</h6>
-                                <p class="card-text">Este un texto simplificado de una noticia</p>
-                                <div class="d-flex justify-content-between">
-                                    <a href="#" class="btn btn-secondary">Editar</a>
-                                    <a href="#" class="btn btn-danger">Borrar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                                             <div class="col-md-3">   Card 1
+                                                <div class="card">
+                                                    <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
+                                                    <div class="card-body" style="border-top: 4px solid #CB1733;">
+                                                        <h5 class="card-title text-primary fw-bold">Nombre del Producto</h5>
+                                                        <p class="card-text text-primary lead">Este un detalle del producto</p>
+                                                        <div class="d-flex justify-content-between">
+                                                            <a href="#" class="btn btn-secondary stretched-link fw-bold">Más información</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="col-md-3">   Card 2 
+                                              <div class="card">
+                                                  <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/averpas.jpg" class="card-img-top" alt="nombre de producto">
+                                                  <div class="card-body" style="border-top: 4px solid #CB1733;">
+                                                      <h5 class="card-title text-primary fw-bold">Nombre del Producto</h5>
+                                                      <p class="card-text text-primary lead">Este un detalle del producto</p>
+                                                      <div class="d-flex justify-content-between">
+                                                          <a href="#" class="btn btn-secondary stretched-link fw-bold">Más información</a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                            
+                                            <div class="col-md-3">   Card 3 
+                                              <div class="card">
+                                                  <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/curapietin2.jpg" class="card-img-top" alt="nombre de producto">
+                                                  <div class="card-body" style="border-top: 4px solid #CB1733;">
+                                                      <h5 class="card-title text-primary fw-bold">Nombre del Producto</h5>
+                                                      <p class="card-text text-primary lead">Este un detalle del producto</p>
+                                                      <div class="d-flex justify-content-between">
+                                                          <a href="#" class="btn btn-secondary stretched-link fw-bold">Más información</a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                
+                                            
+                                            <div class="col-md-3">  Card 4
+                                                <div class="card">
+                                                    <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/eon.jpg" class="card-img-top" alt="nombre de producto">
+                                                    <div class="card-body" style="border-top: 4px solid #CB1733;">
+                                                        <h5 class="card-title text-primary fw-bold">Nombre del Producto</h5>
+                                                        <p class="card-text text-primary lead">Este un detalle del producto</p>
+                                                        <div class="d-flex justify-content-between">
+                                                            <a href="#" class="btn btn-secondary stretched-link fw-bold">Más información</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    -->
                     
                 </div>
     
-                <div id="newsContainer-error" class="row pt-3 pb-3 error"></div>
+                <div id="productosContainer-error" class="row pt-3 pb-3 error"></div>
             </div>
     
     
     
-    
-            
-    
-    
-    
-            
         </section>
     
     
@@ -319,7 +326,6 @@
     
     
         <!-- footer -->
-    
     
         <footer class="bg-dark text-white footer">
             <div class="container">
@@ -389,5 +395,6 @@
         <script src="./js/bootstrap.bundle.min.js"></script>
 
         <script src="js/script.js" type="module"></script>
+        <script src="js/vademecum.js" type="module"></script>
 </body>
 </html>

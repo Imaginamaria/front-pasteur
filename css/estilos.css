@@ -13084,6 +13084,21 @@ a:hover {
   text-decoration: none;
 }
 
+.custom-border {
+  border-width: 3px; /* Ajusta el grosor del borde */
+}
+
+/* Espaciado entre los elementos del menú */
+.navbar .nav-item {
+  margin-left: 15px; /* Espacio a la izquierda de cada elemento */
+  margin-right: 15px; /* Espacio a la derecha de cada elemento */
+}
+
+/* Ajuste del espaciado interno de los enlaces */
+.navbar .nav-link {
+  padding: 0.5rem 1.2rem; /* Relleno adicional para aumentar el área clicable */
+}
+
 .breadcrumb-item a {
   color: #0F4486;
   text-decoration: none;
@@ -13144,6 +13159,10 @@ a:hover {
   margin-top: 10px; /* Espacio entre el botón y el párrafo */
   margin: 0 auto;
   display: block;
+}
+
+.login {
+  padding-top: 180px;
 }
 
 .titulo-zafra {

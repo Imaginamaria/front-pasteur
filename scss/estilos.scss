@@ -58,7 +58,22 @@ a {
   }
 }
 
-// Breadcrumb
+.custom-border {
+  border-width: 3px; /* Ajusta el grosor del borde */
+}
+
+/* Espaciado entre los elementos del menú */
+.navbar .nav-item {
+  margin-left: 15px; /* Espacio a la izquierda de cada elemento */
+  margin-right: 15px; /* Espacio a la derecha de cada elemento */
+}
+
+/* Ajuste del espaciado interno de los enlaces */
+.navbar .nav-link {
+  padding: 0.5rem 1.2rem; /* Relleno adicional para aumentar el área clicable */
+}
+
+//Breadcrumb
 
 .breadcrumb-item a {
   color: $primary;
@@ -129,6 +144,12 @@ a {
   margin-top: 10px; /* Espacio entre el botón y el párrafo */
   margin: 0 auto;
   display: block;
+}
+
+//login
+.login{
+  padding-top: 180px;
+
 }
 
 // Zafra
