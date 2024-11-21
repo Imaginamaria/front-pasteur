@@ -39,7 +39,8 @@ const mostrarCardProductos =(data) =>{
             producto.calculadora,
             producto.lineaterapeutica,
             producto.marca,
-            producto.precio
+            producto.precio,
+            producto.zafra
          ).mostrarEnCard()
      )).join("");
 
@@ -63,6 +64,17 @@ const mostrarError = (error) => {
 }
 
 // aca van los filtros
+document.querySelector("#boton-filtro").addEventListener("click", ()=>{
+    // obtenemos los valores de los inputs
+    const filtroNombre = obtenerValorInput("filtro-nombre");
+    const filtroLineaTerapeutica = obtenerValorInput("filtro-linea-terapeutica");
+
+    // Llamamos a la API de nuevo, pero con los filtros
+    RequestsAPI.getProductos({filtroNombre, filtroLineaTerapeutica})
+    .then(mostrarCardProductos)
+    .catch(mostrarError);
+
+})
 
 
 // obtenemos las cards de productos

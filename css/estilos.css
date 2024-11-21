@@ -13070,6 +13070,10 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+.navbar .nav-link.active {
+  color: #CB1733 !important;
+}
+
 .navbar-sticky {
   opacity: 0.9;
 }
@@ -13080,6 +13084,10 @@ a {
   transition: color 0.3s ease;
 }
 a:hover {
+  color: #CB1733;
+  text-decoration: none;
+}
+a:active {
   color: #CB1733;
   text-decoration: none;
 }
@@ -13368,6 +13376,20 @@ a:hover {
 }
 
 .titulo-productos h1, .titulo-productos .h1 {
+  border-bottom: solid 8px #CB1733;
+  padding-bottom: 20px;
+}
+
+#detalle-producto {
+  margin-top: 210px;
+}
+
+.titulo-detalle h3, .titulo-detalle .h3 {
+  border-bottom: solid 8px #CB1733;
+  padding-bottom: 20px;
+}
+
+.titulo-relacionados h3, .titulo-relacionados .h3 {
   border-bottom: solid 8px #CB1733;
   padding-bottom: 20px;
 }

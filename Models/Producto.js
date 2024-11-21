@@ -15,9 +15,10 @@ export default class Producto{
     calculadora;
     lineaterapeutica;
     marca;
-    precio
+    precio;
+    zafra
     constructor(id=0, nombre="", colgado="", informacion="", dosificacion="", composicion="", tiempos="", especies="", presentacion="", registro="", imagen="", 
-        advertencias="", recomendaciones="", calculadora="", lineaterapeutica="", marca="", precio=0){
+        advertencias="", recomendaciones="", calculadora="", lineaterapeutica="", marca="", precio=0, zafra=""){
         this.id=id;
         this.nombre=nombre;
         this.colgado=colgado;
@@ -35,6 +36,7 @@ export default class Producto{
         this.lineaterapeutica=lineaterapeutica;
         this.marca=marca;
         this.precio=precio;
+        this.zafra=zafra
     }
 
     capitalizarPrimeraLetra(texto){

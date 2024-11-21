@@ -39,7 +39,8 @@ const mostrarCardProductos =(data) =>{
             producto.calculadora,
             producto.lineaterapeutica,
             producto.marca,
-            producto.precio
+            producto.precio,
+            producto.zafra
          ).mostrarEnCard()
      )).join("");
 
