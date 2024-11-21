@@ -20,7 +20,7 @@ const mostrarCardProductos =(data) =>{
 
      // para cada card de producto, creamos una instancia de la clase Producto y la mostramos
 
-     const cardProducto = data
+     const cardProductos = data
      .map((producto) =>(
          new Producto(
             producto.id,
@@ -40,16 +40,16 @@ const mostrarCardProductos =(data) =>{
             producto.lineaterapeutica,
             producto.marca,
             producto.precio
-         ).mostrarCardProductos()
+         ).mostrarEnCard()
      )).join("");
 
      // imprimimos la card de producto en el elemento con id productosContainer
 
-     imprimir("productosContainer", cardProducto);
-     console.log(cardProducto);
+     imprimir("productosContainer", cardProductos);
+     console.log(cardProductos);
 
     // Agregamos evento click a cada card de productos
-    document.querySelectorAll(".card").forEach((itemCard) => {
+    document.querySelectorAll(".producto-card").forEach((itemCard) => {
         card.addEventListener("click", () => {
             // Redirigimos a la página de detalle del producto
             window.location.replace(`detalle-producto.html?id=${itemCard.id}`);

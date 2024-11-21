@@ -213,6 +213,23 @@ a {
   margin-bottom: 20px; /* Espaciado inferior */
   box-shadow: 0 0 10px rgba(189, 189, 189, 0.5);
   border: none;
+  height: 100%;
+}
+
+.row.g-4 .col-md-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Truncar el texto después de tres líneas */
+.card-text {
+  display: -webkit-box; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas */
+  height: calc(1.5em * 3); /* Asegura el espacio adecuado para 3 líneas */
+  line-height: 1.5; /* Ajusta el espacio entre líneas */
 }
 
 .titulo-empresa h2 {

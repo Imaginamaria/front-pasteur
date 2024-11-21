@@ -42,7 +42,7 @@ export default class Producto{
     }
 
     mostrarEnCard(){
-        return `<div class="col-md-3">  
+        return `<div class="col-md-3 class="producto-card ">  
                             <div class="card">
                                 <img src="${this.imagen}" class="card-img-top" alt="${this.nombre}">
                                 <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -55,5 +55,7 @@ export default class Producto{
                             </div>
                         </div>`       
     }
+
+// hacer mostrarEnDetalle
 
 }
