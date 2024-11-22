@@ -54,6 +54,8 @@ export const eventoClickCerrarSesion = () => {
         if (logoutButton) {
             logoutButton.addEventListener("click", () => {
                 sessionStorage.removeItem("session");
+                sessionStorage.removeItem("user");
+
                 RequestsAPI.logout().then(() => {
                     document.location.replace("login.html");
                 });
