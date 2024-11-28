@@ -1,5 +1,5 @@
 import Producto from "../Models/Producto.js";
-import { RequestAPI } from "../RequestaAPI.js";
+import { RequestsAPI } from "../RequestsAPI.js";
 import {
     imprimir,
     validarSesion,
@@ -47,11 +47,11 @@ const mostrarDetalle = (data) => {
         data.zafra
 
     )
-    imprmir ("detalle" , producto.mostrarProducto());
+    imprimir ("detalle" , producto.mostrarEnDetalle());
 };
 
 // obtenemos el producto por su id
-RequestAPI.getProducto(idProducto)
+RequestsAPI.getProducto(idProducto)
 .then(mostrarDetalle)
 .catch((error) =>{
     mostrarError(error)

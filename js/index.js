@@ -1,5 +1,5 @@
 import Producto from "../Models/Producto.js";
-import { RequestsAPI } from "../RequestaAPI.js";
+import { RequestsAPI } from "../RequestsAPI.js";
 import { imprimir,
     obtenerValorInput,
     validarSesion,

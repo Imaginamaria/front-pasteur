@@ -1,5 +1,5 @@
 import Producto from "../Models/Producto.js";
-import { RequestsAPI } from "../RequestaAPI.js";
+import { RequestsAPI } from "../RequestsAPI.js";
 import { imprimir,
     obtenerValorInput,
     validarSesion,
@@ -51,7 +51,8 @@ const mostrarCardProductos =(data) =>{
 
     // Agregamos evento click a cada card de productos
     document.querySelectorAll(".producto-card").forEach((itemCard) => {
-        card.addEventListener("click", () => {
+        console.log(itemCard)
+        itemCard.addEventListener("click", () => {
             // Redirigimos a la página de detalle del producto
             window.location.replace(`detalle-producto.html?id=${itemCard.id}`);
         });

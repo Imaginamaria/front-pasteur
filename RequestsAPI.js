@@ -103,9 +103,9 @@ export class RequestsAPI{
     .catch(manejarErrores);
 }
 
-    // get /producto/:idProducto
+    // get /productos/:idProducto
     static getProducto(idProducto) {
-    return fetch(obtenerUrl(`producto/${idProducto}`), { headers })
+    return fetch(obtenerUrl(`productos/${idProducto}`), { headers })
     .then(procesarRespuesta)
     .catch(manejarErrores);
     }

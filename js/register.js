@@ -4,7 +4,7 @@ import {
     obtenerValorInput,
     imprimir,
   } from "../utils/functions.js";
-  import { RequestsAPI } from "../RequestaAPI.js";
+  import { RequestsAPI } from "../RequestsAPI.js";
   
   // validamos la sesion del usuario
 validarSesion();

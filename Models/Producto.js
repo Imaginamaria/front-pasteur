@@ -44,7 +44,7 @@ export default class Producto{
     }
 
     mostrarEnCard(){
-        return `<div class="col-md-3 class="producto-card ">  
+        return `<div class="col-md-3 producto-card " id="${this.id}">  
                             <div class="card">
                                 <img src="${this.imagen}" class="card-img-top" alt="${this.nombre}">
                                 <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -59,5 +59,43 @@ export default class Producto{
     }
 
 // hacer mostrarEnDetalle
+
+
+    mostrarEnDetalle(){
+        
+        return   `<div class="row">
+        
+        <div class="col-md-5">
+            <img src="${this.imagen}" alt="${this.nombre}" class="img-fluid rounded shadow">
+        </div>
+
+        
+        <div class="col-md-7">
+            <h1 class="text-primary fw-bold">${this.nombre}</h1>
+            <p class="text-muted"><p>${this.colgado}</p>
+            <p><strong>${this.marca}</p>
+            <p><strong>${this.precio}</p>
+            <p><strong>Registro:</strong>${this.registro}</p>
+            
+            <hr>
+            <h5 class="text-primary fw-bold">Detalles:</h5>
+            <ul>
+                <li><strong>Dosificación:</strong>${this.dosificacion}</li>
+                <li><strong>Composición:</strong>${this.composicion}</li>
+                <li><strong>Tiempos:</strong>${this.tiempos}</li>
+                <li><strong>Especies:</strong>${this.especies}</li>
+                <li><strong>Presentación:</strong>${this.presentacion}</li>
+            </ul>
+
+            <hr>
+            <h5 class="text-primary fw-bold">Advertencias y Recomendaciones:</h5>
+            <p>${this.advertencias}</p>
+            <p>${this.recomendaciones}</p>
+
+            <a href="#" class="btn btn-secondary btn-md mt-3">Solicite mas información</a>
+        </div>
+    </div>`;
+
+    }
 
 }
