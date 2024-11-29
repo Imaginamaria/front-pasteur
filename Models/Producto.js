@@ -72,19 +72,19 @@ export default class Producto{
         
         <div class="col-md-7">
             <h1 class="text-primary fw-bold">${this.nombre}</h1>
-            <p class="text-muted"><p>${this.colgado}</p>
-            <p><strong>${this.marca}</p>
-            <p><strong>${this.precio}</p>
-            <p><strong>Registro:</strong>${this.registro}</p>
+            <p class="text-muted"> ${this.colgado}</p>
+            <p><strong> ${this.marca}</p>
+            <p><strong> ${this.precio}</p>
+            <p><strong>Registro:</strong> ${this.registro}</p>
             
             <hr>
             <h5 class="text-primary fw-bold">Detalles:</h5>
             <ul>
-                <li><strong>Dosificación:</strong>${this.dosificacion}</li>
-                <li><strong>Composición:</strong>${this.composicion}</li>
-                <li><strong>Tiempos:</strong>${this.tiempos}</li>
-                <li><strong>Especies:</strong>${this.especies}</li>
-                <li><strong>Presentación:</strong>${this.presentacion}</li>
+                <li><strong>Dosificación:</strong> ${this.dosificacion}</li>
+                <li><strong>Composición:</strong> ${this.composicion}</li>
+                <li><strong>Tiempos:</strong> ${this.tiempos}</li>
+                <li><strong>Especies:</strong> ${this.especies}</li>
+                <li><strong>Presentación:</strong> ${this.presentacion}</li>
             </ul>
 
             <hr>
@@ -92,7 +92,7 @@ export default class Producto{
             <p>${this.advertencias}</p>
             <p>${this.recomendaciones}</p>
 
-            <a href="#" class="btn btn-secondary btn-md mt-3">Solicite mas información</a>
+            <a href="/formulario.html" class="btn btn-secondary btn-md mt-3">Solicite mas información</a>
         </div>
     </div>`;
 
