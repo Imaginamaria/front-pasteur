@@ -75,20 +75,20 @@ const mostrarError = (error) => {
 // aca van los filtros
 document.querySelector("#boton-filtro").addEventListener("click", ()=>{
     // obtenemos los valores de los inputs
-    const filtroNombre = obtenerValorInput("input-filtro-titulo");
+    const filtroNombre = obtenerValorInput("input-filtro-nombre");
     const filtroLineaTerapeutica = obtenerValorInput("input-filtro-linea");
 
     // Llamamos a la API de nuevo, pero con los filtros
-    RequestsAPI.getProductos().then((data)=>{
-        const productosFiltrados = data.filter((producto) =>{
-            const nombreNormalizado = normalizarTexto(producto.nombre);
-            const filtroNombreNormalizado = normalizarTexto(filtroNombre);
-            const lineaCoincide = !filtroLineaTerapeutica || producto.linea === filtroLineaTerapeutica;
+    RequestsAPI.getProductos({filtroNombre,filtroLineaTerapeutica}).then(mostrarCardProductos).catch(mostrarError);
+        // const productosFiltrados = data.filter((producto) =>{
+        //     const nombreNormalizado = normalizarTexto(producto.nombre);
+        //     const filtroNombreNormalizado = normalizarTexto(filtroNombre);
+        //     const lineaCoincide = !filtroLineaTerapeutica || producto.linea === filtroLineaTerapeutica;
 
-            return nombreNormalizado.includes(filtroNombreNormalizado) && lineaCoincide;
-        });
-        mostrarCardProductos(productosFiltrados);
-    }).catch(mostrarError);
+        //     return nombreNormalizado.includes(filtroNombreNormalizado) && lineaCoincide;
+        // });
+        // mostrarCardProductos(productosFiltrados);
+
 
 })
 
