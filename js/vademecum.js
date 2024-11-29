@@ -67,8 +67,8 @@ const mostrarError = (error) => {
 // aca van los filtros
 document.querySelector("#boton-filtro").addEventListener("click", ()=>{
     // obtenemos los valores de los inputs
-    const filtroNombre = obtenerValorInput("filtro-nombre");
-    const filtroLineaTerapeutica = obtenerValorInput("filtro-linea-terapeutica");
+    const filtroNombre = obtenerValorInput("input-filtro-titulo");
+    const filtroLineaTerapeutica = obtenerValorInput("input-filtro-categoria");
 
     // Llamamos a la API de nuevo, pero con los filtros
     RequestsAPI.getProductos({filtroNombre, filtroLineaTerapeutica})
