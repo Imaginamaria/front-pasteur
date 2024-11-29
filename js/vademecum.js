@@ -11,6 +11,14 @@ import { imprimir,
 // agregamos evento click al botón de cerrar sesión
 //eventoClickCerrarSesion();
 
+// función para normalizar cadenas de texto eliminando acentos y convirtiendo a minúsculas - pedi ayuda de AI
+const normalizarTexto = (texto) => {
+    return texto
+        .normalize("NFD") // Descompone caracteres acentuados en caracteres simples + diacríticos
+        .replace(/[\u0300-\u036f]/g, "") // Elimina los diacríticos
+        .toLowerCase(); // Convierte a minúsculas
+};
+
 // function para mostrar las cards de productos
 
 const mostrarCardProductos =(data) =>{
@@ -68,12 +76,19 @@ const mostrarError = (error) => {
 document.querySelector("#boton-filtro").addEventListener("click", ()=>{
     // obtenemos los valores de los inputs
     const filtroNombre = obtenerValorInput("input-filtro-titulo");
-    const filtroLineaTerapeutica = obtenerValorInput("input-filtro-categoria");
+    const filtroLineaTerapeutica = obtenerValorInput("input-filtro-linea");
 
     // Llamamos a la API de nuevo, pero con los filtros
-    RequestsAPI.getProductos({filtroNombre, filtroLineaTerapeutica})
-    .then(mostrarCardProductos)
-    .catch(mostrarError);
+    RequestsAPI.getProductos().then((data)=>{
+        const productosFiltrados = data.filter((producto) =>{
+            const nombreNormalizado = normalizarTexto(producto.nombre);
+            const filtroNombreNormalizado = normalizarTexto(filtroNombre);
+            const lineaCoincide = !filtroLineaTerapeutica || producto.linea === filtroLineaTerapeutica;
+
+            return nombreNormalizado.includes(filtroNombreNormalizado) && lineaCoincide;
+        });
+        mostrarCardProductos(productosFiltrados);
+    }).catch(mostrarError);
 
 })
 
