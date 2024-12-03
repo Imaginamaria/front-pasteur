@@ -130,8 +130,8 @@
             </div>
             
             <div class="row g-4 gy-5" id="productosContainer"> 
-                <!-- Aca se agregaran los productos cuando logre poner la zafra -->
-                <div class="col-md-3">  <!-- Card 1 -->
+                <!-- Aca se agregaran los productos cuando logre poner la zafra 
+                <div class="col-md-3">  
                     <div class="card">
                         <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/alfafly.jpg" class="card-img-top" alt="nombre de producto">
                         <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -144,7 +144,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">  <!-- Card 2 -->
+                <div class="col-md-3">  
                   <div class="card">
                       <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/averpas.jpg" class="card-img-top" alt="nombre de producto">
                       <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -157,7 +157,7 @@
                   </div>
               </div>
 
-                <div class="col-md-3">  <!-- Card 3 -->
+                <div class="col-md-3">  
                   <div class="card">
                       <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/curapietin2.jpg" class="card-img-top" alt="nombre de producto">
                       <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -171,7 +171,7 @@
               </div>
     
                 
-                <div class="col-md-3"> <!-- Card 4 -->
+                <div class="col-md-3"> 
                     <div class="card">
                         <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/eon.jpg" class="card-img-top" alt="nombre de producto">
                         <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -182,9 +182,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
             </div>
+            <div id="productosContainer-error" class="row pt-3 pb-3 error"></div>
         </div>
     </section>
 
@@ -206,7 +207,7 @@
           </div>
         </div>
 
-        <div class="row g-4 pb-5"> 
+        <div class="row g-4 pb-5" id="chinfield-prod"> 
           <div class="col-md-3">  <!-- Card 1 -->
               <div class="card">
                   <img src="http://laboratoriospasteur.com/images/stories/productos/catalogo_prod/180x180/Batacas.jpg" class="card-img-top" alt="nombre de producto">
@@ -261,6 +262,8 @@
           </div>
 
       </div>
+
+      <div id="productosChinfield-error" class="row pt-3 pb-3 error"></div>
 
         </div>
 
@@ -384,5 +387,6 @@
     
     
      <script src="./js/bootstrap.bundle.min.js"></script>
+     <script src="js/index.js" type="module"></script>
     <script src="js/script.js" type="module"></script>
 </html>

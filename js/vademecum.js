@@ -6,12 +6,12 @@ import { imprimir,
     eventoClickCerrarSesion
  } from "../utils/functions.js";
 
- // validamos la sesión del usuario
+// validamos la sesión del usuario
 //validarSesion();
 // agregamos evento click al botón de cerrar sesión
 //eventoClickCerrarSesion();
 
-// función para normalizar cadenas de texto eliminando acentos y convirtiendo a minúsculas - pedi ayuda de AI
+// función para normalizar cadenas de texto eliminando acentos y convirtiendo a minúsculas
 const normalizarTexto = (texto) => {
     return texto
         .normalize("NFD") // Descompone caracteres acentuados en caracteres simples + diacríticos
@@ -26,9 +26,8 @@ const mostrarCardProductos =(data) =>{
     // limpiamos el error si existe
     imprimir("productosContainer-error", "");
 
-     // para cada card de producto, creamos una instancia de la clase Producto y la mostramos
-
-     const cardProductos = data
+    // para cada card de producto, creamos una instancia de la clase Producto y la mostramos
+    const cardProductos = data
      .map((producto) =>(
          new Producto(
             producto.id,
@@ -52,10 +51,9 @@ const mostrarCardProductos =(data) =>{
          ).mostrarEnCard()
      )).join("");
 
-     // imprimimos la card de producto en el elemento con id productosContainer
-
-     imprimir("productosContainer", cardProductos);
-     console.log(cardProductos);
+    // imprimimos la card de producto en el elemento con id productosContainer
+    imprimir("productosContainer", cardProductos);
+    console.log(cardProductos);
 
     // Agregamos evento click a cada card de productos
     document.querySelectorAll(".producto-card").forEach((itemCard) => {
@@ -79,19 +77,27 @@ document.querySelector("#boton-filtro").addEventListener("click", ()=>{
     const filtroLineaTerapeutica = obtenerValorInput("input-filtro-linea");
 
     // Llamamos a la API de nuevo, pero con los filtros
-    RequestsAPI.getProductos({filtroNombre,filtroLineaTerapeutica}).then(mostrarCardProductos).catch(mostrarError);
-        // const productosFiltrados = data.filter((producto) =>{
-        //     const nombreNormalizado = normalizarTexto(producto.nombre);
-        //     const filtroNombreNormalizado = normalizarTexto(filtroNombre);
-        //     const lineaCoincide = !filtroLineaTerapeutica || producto.linea === filtroLineaTerapeutica;
+    RequestsAPI.getProductos().then((data) => {
+        // Filtramos los productos por nombre y línea terapéutica
+        const productosFiltrados = data.filter((producto) => {
+            // Normalizamos el nombre de cada producto y el filtro de nombre
+            const nombreNormalizado = normalizarTexto(producto.nombre);
+            const filtroNombreNormalizado = normalizarTexto(filtroNombre);
 
-        //     return nombreNormalizado.includes(filtroNombreNormalizado) && lineaCoincide;
-        // });
-        // mostrarCardProductos(productosFiltrados);
+            // Comprobamos si el nombre del producto incluye el filtro (parcial)
+            const nombreCoincide = nombreNormalizado.includes(filtroNombreNormalizado);
 
+            // Comprobamos si la línea terapéutica coincide (si se proporciona un filtro)
+            const lineaCoincide = !filtroLineaTerapeutica || normalizarTexto(producto.lineaterapeutica).includes(normalizarTexto(filtroLineaTerapeutica));
 
+            // Retornamos si ambos filtros coinciden
+            return nombreCoincide && lineaCoincide;
+        });
+
+        // Mostramos los productos filtrados
+        mostrarCardProductos(productosFiltrados);
+    }).catch(mostrarError);
 })
-
 
 // obtenemos las cards de productos
 RequestsAPI.getProductos().then(mostrarCardProductos).catch(mostrarError);
