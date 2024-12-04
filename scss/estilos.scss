@@ -68,6 +68,58 @@ a {
   }
 }
 
+.boton-especie {
+  display: flex; /* Asegura que el contenido se alinee correctamente */
+  flex-direction: column; /* Coloca la imagen y el texto en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  padding: 20px; /* Espaciado interno para aumentar el tamaño del botón */
+  background-color: #f7f7f7; /* Color de fondo del botón */
+  color: #0F4486; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para hover */
+  border: none; /* Sin borde por defecto */
+}
+
+.boton-especie .img-container:hover {
+  background-color: rgba(15, 68, 134, 0.5);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img-container {
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.img-container img {
+  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.boton-especie .img-container {
+  border-radius: 50%;  /* Redondea el contenedor */
+  overflow: hidden;    /* Oculta lo que se desborda del contenedor */
+  padding: 30px;       /* Aplica el padding solo al contenedor */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave al contenedor */
+}
+
+
+.boton-especie img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  
+}
+
+.boton-especie h5 {
+  margin: 0;
+  font-size: 18px;
+}
+
+
+
 .custom-border {
   border-width: 3px; /* Ajusta el grosor del borde */
 }

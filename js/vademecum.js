@@ -70,6 +70,27 @@ const mostrarError = (error) => {
     imprimir("productosContainer-error", error);
 }
 
+
+// Función para manejar el filtrado por especie
+const filtrarPorEspecie = (especieSeleccionada) => {
+    RequestsAPI.getProductos().then((data) => {
+        const productosFiltrados = data.filter((producto) =>
+            producto.especies.some((especie) =>
+                normalizarTexto(especie) === normalizarTexto(especieSeleccionada)
+            )
+        );
+        mostrarCardProductos(productosFiltrados);
+    }).catch(mostrarError);
+};
+
+// Configuramos los eventos de clic en los botones de especies
+document.querySelectorAll(".boton-especie").forEach((boton) => {
+    boton.addEventListener("click", () => {
+        const especieSeleccionada = boton.dataset.especie; // Obtenemos la especie del atributo data-especie
+        filtrarPorEspecie(especieSeleccionada);
+    });
+});
+
 // aca van los filtros
 document.querySelector("#boton-filtro").addEventListener("click", ()=>{
     // obtenemos los valores de los inputs
