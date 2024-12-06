@@ -85,7 +85,9 @@
 </section>
 
 
-<footer class="bg-dark text-white footer">
+        <!-- footer -->
+    
+        <footer class="bg-dark text-white footer">
             <div class="container">
                 <div class="footer-contenido row d-flex align-items-end my-4">
                     <!-- Logo -->
@@ -96,8 +98,9 @@
                             </a>
                             <p><strong>Laboratorios Pasteur S.A.</strong> <br>
                                 Comprometidos con la salud y bienestar animal.</p>
-                            <p>Teléfono: +598.98.751.516 <br>
-                                E-mail: info@laboratoriospasteur.com</p>
+                            <p>Teléfono: <a href="https://wa.me/59898751516" class="text-white text-decoration-none">+598.98.751.516</a> <br>
+                                <a href="mailto:info@laboratoriospasteur.com" class="text-white text-decoration-none">info@laboratoriospasteur.com</a>
+                            </p>
                         </div>
                     </div>
         
@@ -117,10 +120,10 @@
                     <div class="col-12 col-md-5 text-left text-md-start px-3 d-flex flex-column flex-md-row justify-content-between">
                         <div class="newsletter text-center text-md-start">
                             <h6 class="fw-bold">Manténgase informado</h6>
-                            <form>
+                            <form id="subscribeForm">
                                 <div class="input-group mb-3 d-flex w-100">
-                                    <input type="email" class="form-control" placeholder="Tu dirección de email" />
-                                    <button class="btn btn-secondary text-white rounded-end">Suscríbete</button>
+                                    <input type="email" class="form-control" placeholder="Tu dirección de email" id="subscribeEmail" required/>
+                                    <button type="submit" class="btn btn-secondary text-white rounded-end">Suscríbete</button>
                                 </div>
                             </form>
                             <p>Suscríbete a nuestro newsletter y recibe las últimas novedades en productos, noticias del sector agropecuario y consejos para el cuidado de la salud animal.</p>
@@ -140,15 +143,27 @@
         
                 <!-- Pie de página -->
                 <div class="container-fluid"> 
-                    <!-- Pie de página -->
                     <div class="row pie-pagina">
                         <div class="col-12 text-center">
                             <p>© 2024 Laboratorios Pasteur S.A. Todos los derechos reservados.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </footer>
         
-</footer>
+        <!-- Toast de Confirmación -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="subscribeToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">Suscripción Exitosa</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    ¡Te has suscrito correctamente a nuestro boletín! Gracias por unirte.
+                </div>
+            </div>
+        </div>
     
 </body>
 </html>

@@ -13293,6 +13293,15 @@ a:active {
   padding-bottom: 20px;
 }
 
+.detalle-ampliacion {
+  line-height: 1.5; /* Ajusta el espacio entre líneas */
+}
+
+.logo-marca {
+  width: 100px;
+  padding-top: 60px;
+}
+
 .footer {
   color: white;
   padding: 20px;
@@ -13331,6 +13340,19 @@ a:active {
   margin: 0;
   padding: 20px 0;
   text-align: center;
+}
+
+a[href^="mailto:"] {
+  color: white; /* Asegura que el color sea blanco */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: color 0.3s ease; /* Efecto de transición suave */
+}
+
+a[href^="mailto:"]:hover,
+a[href^="mailto:"]:focus,
+a[href^="mailto:"]:active {
+  color: rgba(255, 255, 255, 0.8); /* Mantiene un color similar con un toque de transparencia */
+  text-decoration: none; /* Evita subrayado incluso en hover */
 }
 
 .chinfield {

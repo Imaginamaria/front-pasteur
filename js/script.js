@@ -13,4 +13,18 @@ function userScroll() {
   }
   
   document.addEventListener('DOMContentLoaded', userScroll);
+
+
+  // Toast de confirmación del suscribase del footer
+
+  document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Previene el comportamiento por defecto del formulario
+
+    // Muestra el Toast de confirmación
+    var toast = new bootstrap.Toast(document.getElementById('subscribeToast'));
+    toast.show();
+    
+    // Limpia el campo de email
+    document.getElementById('subscribeEmail').value = '';
+});
   
