@@ -43,6 +43,11 @@ export default class Producto{
         return texto.charAt(0).toUpperCase() + texto.slice(1);
     }
 
+      // Nueva función para reemplazar dashes por <br>
+      reemplazarDashesPorBr(texto) {
+        return texto.replace(/-/g, '<br>');
+    }
+
     mostrarEnCard(){
         return `<div class="col-md-3 producto-card " id="${this.id}">  
                             <div class="card">
@@ -51,8 +56,7 @@ export default class Producto{
                                     <h5 class="card-title text-primary fw-bold">${this.capitalizarPrimeraLetra(this.nombre)}</h5>
                                     <p class="card-text text-primary lead">${this.capitalizarPrimeraLetra(this.colgado)}</p>
                                     <div class="d-flex justify-content-between">
-                                         <input type="button" class="btn btn-secondary stretched-link fw-bold" id="verMas" value="Más información" />
-                                    </div>
+                                    <a href="detalle-producto.html?id=${this.id}" class="btn btn-secondary stretched-link fw-bold">Más información</a>                                    </div>
                                 </div>
                             </div>
                         </div>`       
@@ -62,6 +66,7 @@ export default class Producto{
 
 
 mostrarEnDetalle() {
+    console.log(this); // Verifica qué datos tiene el objeto
     let logo = '';
 
     // Determinar el logo según la marca
@@ -73,14 +78,40 @@ mostrarEnDetalle() {
         logo = `<span class="text-muted">Marca no especificada</span>`;
     }
 
+
+        // Mapear especies a imágenes
+        const speciesImages = {
+            vaca: "img/especie-bovinos.png",
+            caballo: "img/especie-equinos.png",
+            mascota: "img/especie-mascotas.png",
+            ave: "img/especie-aves.png",
+            porcino: "img/especie-porcinos.png",
+            oveja: "img/especie-ovinos.png",
+            caprino: "img/especie-caprinos.png",
+        };
+
+// Crear HTML para las imágenes de las especies
+const especieHTML = this.especies.map(especie => {
+    const imgSrc = speciesImages[especie] || "img/default-especie.png"; // Imagen por defecto si no hay coincidencia
+    return `<img src="${imgSrc}" alt="${especie}" class="img-fluid" style="max-width: 100px; margin-right: 10px;">`;
+}).join('');
+
+
+
     return `<div class="row">
+
+                    <div class="titulo-detalle">
+                     <h3 class="fw-bold mt-5 mb-2 text-primary">${this.lineaterapeutica}</h3>
+                </div>
+
+  
         
-        <div class="col-md-5">
+        <div class="col-md-5 separador-titulo">
             <img src="${this.imagen}" alt="${this.nombre}" class="img-fluid rounded shadow">
             <div>${logo}</div>
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-7 separador-titulo">
             <h1 class="text-primary fw-bold">${this.nombre}</h1>
             <h4 class="text-primary"> ${this.colgado}</h4>
             
@@ -90,20 +121,23 @@ mostrarEnDetalle() {
             <hr>
             <h5 class="text-primary fw-bold">Detalles:</h5>
             <ul>
-                <li class="detalle-ampliacion fs-5"><strong>Dosificación:</strong> ${this.dosificacion}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Composición (cada 100 ml): </strong> ${this.composicion}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Tiempos:</strong> ${this.tiempos}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Especies:</strong> ${this.especies}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Presentación:</strong> ${this.presentacion}</li>
+            <li class="detalle-ampliacion fs-5"><strong>Información:</strong> ${this.reemplazarDashesPorBr(this.informacion)}</li>
+                <li class="detalle-ampliacion fs-5"><strong>Dosificación:</strong> ${this.reemplazarDashesPorBr(this.dosificacion)}</li>
+                <li class="detalle-ampliacion fs-5"><strong>Composición (cada 100 ml): </strong> ${this.reemplazarDashesPorBr(this.composicion)}</li>
+                <li class="detalle-ampliacion fs-5"><strong>Tiempos:</strong> ${this.reemplazarDashesPorBr(this.tiempos)}</li>
+                        <li class="detalle-ampliacion fs-5"><strong>Especies:</strong><br>${especieHTML}</li> <!-- Aquí se muestran las imágenes -->                <li class="detalle-ampliacion fs-5"><strong>Presentación:</strong> ${this.presentacion} cc</li>
             </ul>
 
             <hr>
             <h5 class="text-primary fw-bold">Advertencias y Recomendaciones:</h5>
-            <p class="detalle-ampliacion fs-5">${this.advertencias}</p>
-            <p class="detalle-ampliacion fs-5">${this.recomendaciones}</p>
+            <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.advertencias)}</p>
+            <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.recomendaciones)}</p>
 
             <a href="/formulario.html" class="btn btn-secondary btn-md mt-3">Solicite mas información</a>
         </div>
+    </div>
+    
+    <hr class="my-5">
     </div>`;
 }
 

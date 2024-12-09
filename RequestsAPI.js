@@ -103,6 +103,18 @@ export class RequestsAPI{
     .catch(manejarErrores);
 }
 
+
+    // Función para obtener productos por línea terapéutica
+    static async getProductosPorLinea(lineaTerapeutica) {
+        const response = await fetch(obtenerUrl(`productos?lineaTerapeutica=${lineaTerapeutica}`), { headers });
+        
+        if (!response.ok) {
+            throw new Error('Error al obtener productos relacionados');
+        }
+
+        return await response.json();
+    }
+
     // get /productos/:idProducto
     static getProducto(idProducto) {
     return fetch(obtenerUrl(`productos/${idProducto}`), { headers })

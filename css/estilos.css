@@ -13458,6 +13458,10 @@ a[href^="mailto:"]:active {
   padding-bottom: 20px;
 }
 
+.separador-titulo {
+  margin-top: 50px;
+}
+
 .titulo-relacionados h3, .titulo-relacionados .h3 {
   border-bottom: solid 8px #CB1733;
   padding-bottom: 20px;
