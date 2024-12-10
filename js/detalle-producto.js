@@ -12,13 +12,13 @@ const idProducto = params.get("id");
 
 console.log("ID del producto:", idProducto);
 
-// function para mostrar un error en el detalle del producto
+// funcion para mostrar un error en el detalle del producto
 
 const mostrarError = (error) => {
     imprimir("detalle-error" , error)
 };
 
-// function para mostrar el detalle del producto
+// funcion para mostrar el detalle del producto
 
 const mostrarDetalle = (data) => {
 
@@ -49,24 +49,49 @@ const mostrarDetalle = (data) => {
     )
     imprimir ("detalle" , productoActual.mostrarEnDetalle());
 
-    // Obtener y mostrar productos relacionados
-   obtenerProductosRelacionados(productoActual.lineaterapeutica,productoActual.id);
+    // Obtener y mostrar productos relacionados, pasando el ID actual y las especies
+    obtenerProductosRelacionados(productoActual.lineaterapeutica, productoActual.id, productoActual.especies);
 };
 
 // Función para obtener productos relacionados
-const obtenerProductosRelacionados = async (lineaTerapeutica, idActual) => {
+const obtenerProductosRelacionados = async (lineaTerapeutica, idActual, especies) => {
     try {
         const response = await RequestsAPI.getProductosPorLinea(lineaTerapeutica); // Obtiene todos los productos relacionados
         
         // Filtra el producto actual
         const productosFiltrados = response.filter(producto => producto.id !== idActual);
 
+        if (productosFiltrados.length === 0) {
+            // Si no hay productos relacionados, buscar por especies
+            obtenerProductosPorEspecie(especies, idActual);
+        } else {
+            // Selecciona 4 productos aleatorios
+            const productosAleatorios = seleccionarProductosAleatorios(productosFiltrados, 4);
+            mostrarProductosRelacionados(productosAleatorios); // Mostrar los productos filtrados y aleatorios
+        }
+
+    } catch (error) {
+        mostrarError(error);
+    }
+};
+
+// Función para obtener productos por especie
+const obtenerProductosPorEspecie = async (especies, idActual) => {
+    try {
+        const response = await RequestsAPI.getProductosPorEspecie(especies); // Asegúrate de tener esta función en tu API
+
+        // Filtra el producto actual
+        const productosFiltrados = response.filter(producto => producto.id !== idActual);
+
+        
+
         // Selecciona 4 productos aleatorios
         const productosAleatorios = seleccionarProductosAleatorios(productosFiltrados, 4);
-        console.log("Productos aleatorios:", productosAleatorios);
+
+        console.log("Productos aleatorios por especie:", productosAleatorios); // Para depuración
 
         mostrarProductosRelacionados(productosAleatorios); // Mostrar los productos filtrados y aleatorios
-
+        
     } catch (error) {
         mostrarError(error);
     }

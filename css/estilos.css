@@ -13297,6 +13297,10 @@ a:active {
   line-height: 1.5; /* Ajusta el espacio entre líneas */
 }
 
+.detalle-ampliacion {
+  margin-bottom: 20px;
+}
+
 .logo-marca {
   width: 100px;
   padding-top: 60px;

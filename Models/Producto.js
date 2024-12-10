@@ -90,18 +90,40 @@ mostrarEnDetalle() {
             caprino: "img/especie-caprinos.png",
         };
 
-// Crear HTML para las imágenes de las especies
-const especieHTML = this.especies.map(especie => {
-    const imgSrc = speciesImages[especie] || "img/default-especie.png"; // Imagen por defecto si no hay coincidencia
-    return `<img src="${imgSrc}" alt="${especie}" class="img-fluid" style="max-width: 100px; margin-right: 10px;">`;
-}).join('');
+        // Crear HTML para las imágenes de las especies
+        const especieHTML = this.especies.map(especie => {
+            const imgSrc = speciesImages[especie] || "img/default-especie.png"; // Imagen por defecto si no hay coincidencia
+            return `<img src="${imgSrc}" alt="${especie}" class="img-fluid" style="max-width: 100px; margin-right: 10px;">`;
+        }).join('');
+
+        // Mapear presentaciones a imágenes
+        const imagenesPresentacion = {
+            10: "img/presentacion-inyectable.png",
+            50: "img/presentacion-50.png", 
+            100: "img/presentacion-100.png",
+            200: "img/presentacion-200.png",
+            250: "img/presentacion-250.png",
+            500: "img/presentacion-500.png",
+            1000: "img/presentacion-1000.png",
+            3000: "img/presentacion-3000.png",
+            5000: "img/presentacion-5000.png"
+        };
+
+         // Obtener la imagen de presentación correspondiente
+
+         const presentacionHTML = this.presentacion.map(presentacion => {
+            const imagenPresentacion = imagenesPresentacion[presentacion] || "img/default-presentacion.png"; // Imagen por defecto si no hay coincidencia
+            return `<img src="${imagenPresentacion}" alt="${presentacion}" class="img-fluid" style="max-width: 200px; margin-right: 10px;">`;
+        }).join('');
+
+        
 
 
 
     return `<div class="row">
 
                     <div class="titulo-detalle">
-                     <h3 class="fw-bold mt-5 mb-2 text-primary">${this.lineaterapeutica}</h3>
+                     <h3 class="fw-bold mt-5 mb-2 text-primary">${this.capitalizarPrimeraLetra(this.lineaterapeutica)}</h3>
                 </div>
 
   
@@ -115,7 +137,7 @@ const especieHTML = this.especies.map(especie => {
             <h1 class="text-primary fw-bold">${this.nombre}</h1>
             <h4 class="text-primary"> ${this.colgado}</h4>
             
-            <p>USD ${this.precio}</p>
+             <p>USD ${this.precio}</p> 
             <p><strong>Registro:</strong> ${this.registro}</p>
             
             <hr>
@@ -125,7 +147,8 @@ const especieHTML = this.especies.map(especie => {
                 <li class="detalle-ampliacion fs-5"><strong>Dosificación:</strong> ${this.reemplazarDashesPorBr(this.dosificacion)}</li>
                 <li class="detalle-ampliacion fs-5"><strong>Composición (cada 100 ml): </strong> ${this.reemplazarDashesPorBr(this.composicion)}</li>
                 <li class="detalle-ampliacion fs-5"><strong>Tiempos:</strong> ${this.reemplazarDashesPorBr(this.tiempos)}</li>
-                        <li class="detalle-ampliacion fs-5"><strong>Especies:</strong><br>${especieHTML}</li> <!-- Aquí se muestran las imágenes -->                <li class="detalle-ampliacion fs-5"><strong>Presentación:</strong> ${this.presentacion} cc</li>
+                <li class="detalle-ampliacion fs-5"><strong>Especies:</strong><br>${especieHTML}</li> <!-- Aquí se muestran las imágenes especies --> 
+                <li class="detalle-ampliacion fs-5"><strong>Presentación:<br></strong> ${presentacionHTML}</li>
             </ul>
 
             <hr>
@@ -133,7 +156,9 @@ const especieHTML = this.especies.map(especie => {
             <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.advertencias)}</p>
             <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.recomendaciones)}</p>
 
-            <a href="/formulario.html" class="btn btn-secondary btn-md mt-3">Solicite mas información</a>
+            <button type="button" class="btn btn-secondary stretched-link" data-bs-toggle="modal"
+                                    data-bs-target="#contactModal" onclick='setProductId(${this.id})'> Más información
+             </button>
         </div>
     </div>
     

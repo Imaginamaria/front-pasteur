@@ -115,6 +115,19 @@ export class RequestsAPI{
         return await response.json();
     }
 
+    // Función para obtener productos por especie
+static async getProductosPorEspecie(especies) {
+    const queryString = especies.map(especie => `especies=${especie}`).join('&'); // Crea una cadena de consulta con las especies seleccionadas.
+    
+    const response = await fetch(obtenerUrl(`productos?${queryString}`), { headers });
+    
+    if (!response.ok) {
+        throw new Error('Error al obtener productos por especie');
+    }
+
+    return await response.json();
+}
+
     // get /productos/:idProducto
     static getProducto(idProducto) {
     return fetch(obtenerUrl(`productos/${idProducto}`), { headers })
