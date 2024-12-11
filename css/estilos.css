@@ -13295,15 +13295,16 @@ a:active {
 
 .detalle-ampliacion {
   line-height: 1.5; /* Ajusta el espacio entre líneas */
-}
-
-.detalle-ampliacion {
   margin-bottom: 20px;
 }
 
 .logo-marca {
   width: 100px;
   padding-top: 60px;
+}
+
+#contacto {
+  margin-top: 210px;
 }
 
 .footer {
@@ -13469,6 +13470,32 @@ a[href^="mailto:"]:active {
 .titulo-relacionados h3, .titulo-relacionados .h3 {
   border-bottom: solid 8px #CB1733;
   padding-bottom: 20px;
+}
+
+#calculadoraForm {
+  background-color: #0F4486;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+
+#resultados {
+  padding-bottom: 10px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#resultados p {
+  border-bottom: #0F4486 solid 2px;
+  padding-bottom: 10px;
+}
+
+#resultados h4, #resultados .h4 {
+  background-color: #0F4486;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 @media (max-width: 768px) {
