@@ -38,8 +38,8 @@ const manejarErrores =(error = new Error("Error desconocido"))=>{
 export class RequestsAPI{
 
 
-   //static urlBaseBackend = "https://apipasteur-back.onrender.com"; real
-   static urlBaseBackend = "http://localhost:3001"; //cuando suba al servidor lo cambio por la del servidor
+static urlBaseBackend = "https://apipasteur-back.onrender.com"; //real
+     //static urlBaseBackend = "http://localhost:3001"; //cuando suba al servidor lo cambio por la del servidor
 
 
    // post /login

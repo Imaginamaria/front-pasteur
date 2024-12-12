@@ -13498,6 +13498,14 @@ a[href^="mailto:"]:active {
   padding-top: 10px;
 }
 
+#form-login {
+  height: fit-content;
+}
+
+.especial {
+  margin-top: 20px;
+}
+
 @media (max-width: 768px) {
   #navbarNavDropdown {
     background-color: #0F4486;

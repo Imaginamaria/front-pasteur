@@ -557,8 +557,13 @@ a[href^="mailto:"]:active {
   padding-top: 10px;
 }
 
+#form-login {
+  height: fit-content;
+}
 
-
+.especial {
+  margin-top: 20px;
+}
 
 
 // Ajustes para pantallas pequeñas
@@ -619,6 +624,9 @@ a[href^="mailto:"]:active {
 
   .titulo-vademecum{
     width: 100%;}
+
+
+
   
 
 
