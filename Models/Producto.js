@@ -98,6 +98,7 @@ mostrarEnDetalle() {
 
         // Mapear presentaciones a imágenes
         const imagenesPresentacion = {
+            1: "img/presentacion-supositorio.png",
             10: "img/presentacion-inyectable.png",
             50: "img/presentacion-50.png", 
             100: "img/presentacion-100.png",
