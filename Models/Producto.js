@@ -155,8 +155,9 @@ mostrarEnDetalle() {
             </ul>
 
             <hr>
-            <h5 class="text-primary fw-bold">Advertencias y Recomendaciones:</h5>
+            <h5 class="text-primary fw-bold">Advertencias:</h5>
             <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.advertencias)}</p>
+            <h5 class="text-primary fw-bold">Recomendaciones:</h5>
             <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.recomendaciones)}</p>
 
             
