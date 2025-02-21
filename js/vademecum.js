@@ -13,6 +13,12 @@ import { imprimir,
 
 // función para normalizar cadenas de texto eliminando acentos y convirtiendo a minúsculas
 const normalizarTexto = (texto) => {
+    // Asegurarnos de que 'texto' sea una cadena antes de normalizarlo
+    if (typeof texto !== 'string') {
+        console.warn("⚠ El valor no es una cadena:", texto);
+        return ''; // O puedes retornar texto como está, dependiendo de lo que necesites
+    }
+    
     return texto
         .normalize("NFD") // Descompone caracteres acentuados en caracteres simples + diacríticos
         .replace(/[\u0300-\u036f]/g, "") // Elimina los diacríticos
@@ -119,13 +125,18 @@ document.querySelector("#boton-filtro").addEventListener("click", ()=>{
                 // Verificamos si `lineaterapeutica` es un array antes de usar `.some()`
                 let lineaCoincide = false;
                 if (Array.isArray(producto.lineaterapeutica)) {
+                    // Si es un array, aplica el filtro
                     lineaCoincide = !filtroLineaTerapeutica || 
                         producto.lineaterapeutica.some((linea) =>
                             normalizarTexto(linea).includes(normalizarTexto(filtroLineaTerapeutica))
                         );
-                } else {
-                    console.warn("⚠ lineaterapeutica NO es un array en:", producto);
-                }
+                    } else if (typeof producto.lineaterapeutica === 'string') {
+                        // Si es una cadena, normalízala directamente
+                        lineaCoincide = !filtroLineaTerapeutica || 
+                            normalizarTexto(producto.lineaterapeutica).includes(normalizarTexto(filtroLineaTerapeutica));
+                    } else {
+                        console.warn("⚠ 'lineaterapeutica' no es ni un array ni una cadena en:", producto);
+                    }
 
             // Retornamos si ambos filtros coinciden
             return nombreCoincide && lineaCoincide;
