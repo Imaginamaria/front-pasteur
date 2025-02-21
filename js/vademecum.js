@@ -112,13 +112,10 @@ document.querySelector("#boton-filtro").addEventListener("click", ()=>{
             //const lineaCoincide = !filtroLineaTerapeutica || normalizarTexto(producto.lineaterapeutica).includes(normalizarTexto(filtroLineaTerapeutica));
 
             const lineaCoincide =
-                    !filtroLineaTerapeutica ||
-                    (Array.isArray(producto.lineaterapeutica)
-                        ? producto.lineaterapeutica.some((linea) =>
-                              normalizarTexto(linea).includes(normalizarTexto(filtroLineaTerapeutica))
-                          )
-                        : normalizarTexto(producto.lineaterapeutica).includes(normalizarTexto(filtroLineaTerapeutica)));
-
+            !filtroLineaTerapeutica ||
+            producto.lineaterapeutica.some((linea) =>
+                normalizarTexto(linea).includes(normalizarTexto(filtroLineaTerapeutica))
+            );
 
             // Retornamos si ambos filtros coinciden
             return nombreCoincide && lineaCoincide;
