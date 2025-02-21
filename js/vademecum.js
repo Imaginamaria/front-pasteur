@@ -96,11 +96,16 @@ document.querySelector("#boton-filtro").addEventListener("click", ()=>{
     // obtenemos los valores de los inputs
     const filtroNombre = obtenerValorInput("input-filtro-nombre");
     const filtroLineaTerapeutica = obtenerValorInput("input-filtro-linea");
+    
 
     // Llamamos a la API de nuevo, pero con los filtros
     RequestsAPI.getProductos().then((data) => {
         // Filtramos los productos por nombre y línea terapéutica
         const productosFiltrados = data.filter((producto) => {
+            console.log("Producto:", producto); 
+            console.log("Lineaterapeutica:", producto.lineaterapeutica);
+            console.log("Filtro aplicado:", filtroLineaTerapeutica);
+            
             // Normalizamos el nombre de cada producto y el filtro de nombre
             const nombreNormalizado = normalizarTexto(producto.nombre);
             const filtroNombreNormalizado = normalizarTexto(filtroNombre);
@@ -111,11 +116,16 @@ document.querySelector("#boton-filtro").addEventListener("click", ()=>{
             // Comprobamos si la línea terapéutica coincide (si se proporciona un filtro)
             //const lineaCoincide = !filtroLineaTerapeutica || normalizarTexto(producto.lineaterapeutica).includes(normalizarTexto(filtroLineaTerapeutica));
 
-            const lineaCoincide =
-            !filtroLineaTerapeutica ||
-            producto.lineaterapeutica.some((linea) =>
-                normalizarTexto(linea).includes(normalizarTexto(filtroLineaTerapeutica))
-            );
+                // Verificamos si `lineaterapeutica` es un array antes de usar `.some()`
+                let lineaCoincide = false;
+                if (Array.isArray(producto.lineaterapeutica)) {
+                    lineaCoincide = !filtroLineaTerapeutica || 
+                        producto.lineaterapeutica.some((linea) =>
+                            normalizarTexto(linea).includes(normalizarTexto(filtroLineaTerapeutica))
+                        );
+                } else {
+                    console.warn("⚠ lineaterapeutica NO es un array en:", producto);
+                }
 
             // Retornamos si ambos filtros coinciden
             return nombreCoincide && lineaCoincide;
