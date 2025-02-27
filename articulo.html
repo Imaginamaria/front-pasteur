@@ -155,32 +155,33 @@
                     <h1 class="fw-bold mt-5 mb-2 text-primary">Investigación y consejos</h1>
                     <h3 class="mb-5 text-primary">Explora investigaciones clave que impulsan nuevas soluciones y enfoques para el bienestar y cuidado de tus animales.</h3>
                 </div>
-                <div class="row g-4 gy-5">
-                    <!-- Columna Principal (Dos Columnas) -->
-                    <div class="col-md-8" id="investigaciones">
-                        <div  class="card-articulo">
-                            <div class="row">
-                                <h6 class="text-dark">FECHA DE PUBLICACIÓN</h6>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid" src="img/falta-energia-equinos.png" alt="falta de energia equina">
+                <div class="row g-4 gy-5" id="articulos">
+                    <!-- Articulo-->
 
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="card-title text-primary fw-bold pb-3">¿Por qué los caballos presentan falta de energía?</h3>
-                                    <h5 class="card-title text-primary pb-2">Causas comunes de la fatiga en equinos</h5>
-                                    <p>La falta de energía en los caballos puede deberse a diversos factores, como una dieta desequilibrada, exceso de entrenamiento o enfermedades subyacentes. Detectar los síntomas tempranos y ajustar el régimen alimenticio es clave para mantener su rendimiento óptimo.</p>
-                                    <a href="#" class="btn btn-secondary stretched-link">Leer más</a>
 
-                                </div>
-                                
-
-                            </div>
-                        </div>
-
-                        <div id="articulosContainer-error" class="row pt-3 pb-3 error"></div>
-                    </div>
+                    <article class="col-md-8 card-articulo">
+                        <header>
+                            <span class="fecha-publicacion">26 de febrero de 2025</span>
+                            <h1 class="titulo">Título del artículo</h1>
+                            <h2 class="colgado">Subtítulo o colgado</h2>
+                        </header>
+                        
+                        <figure>
+                            <img src="imagen.jpg" alt="Descripción de la imagen">
+                        </figure>
+                        
+                        <section class="descripcion">
+                            <p>Breve descripción del artículo que introduce el contenido.</p>
+                        </section>
+                        
+                        <section class="contenido">
+                            <blockquote class="texto-destacado">
+                                "Aquí va una cita o texto destacado relevante dentro del artículo."
+                            </blockquote>
+                            
+                            <p>Este es el contenido principal del artículo. Aquí puedes agregar varios párrafos con información detallada.</p>
+                        </section>
+                    </article>
 
                     <!-- Sidebar -->
                     <div class="col-md-4">
@@ -285,9 +286,9 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/articulo.js"></script>
 
-    <script type="module" src="js/investigacion.js"></script>
+
     <script src="js/script.js" type="module"></script>
-    <script src></script>
 </body>
 </html>

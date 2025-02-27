@@ -424,18 +424,25 @@ a[href^="mailto:"]:active {
 
 // vademecum
 
-#vademecum  {
+#vademecum, #investigacion  {
   margin-top: 210px;
 }
 
-.titulo-vademecum{
+.titulo-vademecum,
+.investigacion{
 
   width: 70%;
   padding-bottom: 10px;
 
 }
 
-.titulo-vademecum h1{
+.vademecum,
+.titulo-investigacion h3{
+  width: 70%;
+}
+
+.titulo-vademecum,
+.titulo-investigacion h1{
   border-bottom: solid 8px $secondary ;
   padding-bottom: 20px;
   
