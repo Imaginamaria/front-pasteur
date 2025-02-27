@@ -48,4 +48,4 @@ import { imprimir,
 
 
 // obtenemos las cards de articulos
-RequestsAPI.getProductos().then(mostrarCardArticulos).catch(mostrarError);
+RequestsAPI.getArticulos().then(mostrarCardArticulos).catch(mostrarError);

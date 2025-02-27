@@ -118,17 +118,17 @@ static urlBaseBackend = "https://apipasteur-back.onrender.com";
     }
 
     // Función para obtener productos por especie
-static async getProductosPorEspecie(especies) {
-    const queryString = especies.map(especie => `especies=${especie}`).join('&'); // Crea una cadena de consulta con las especies seleccionadas.
-    
-    const response = await fetch(obtenerUrl(`productos?${queryString}`), { headers });
-    
-    if (!response.ok) {
-        throw new Error('Error al obtener productos por especie');
-    }
+    static async getProductosPorEspecie(especies) {
+        const queryString = especies.map(especie => `especies=${especie}`).join('&'); // Crea una cadena de consulta con las especies seleccionadas.
+        
+        const response = await fetch(obtenerUrl(`productos?${queryString}`), { headers });
+        
+        if (!response.ok) {
+            throw new Error('Error al obtener productos por especie');
+        }
 
-    return await response.json();
-}
+        return await response.json();
+    }
 
     // get /productos/:idProducto
     static getProducto(idProducto) {
@@ -136,6 +136,39 @@ static async getProductosPorEspecie(especies) {
     .then(procesarRespuesta)
     .catch(manejarErrores);
     }
+
+    static getArticulos(opciones = {}) {
+        const queryParams = new URLSearchParams();
+    
+        // Filtrar por título
+        if (opciones.filtroTitulo) {
+            queryParams.append("titulo", opciones.filtroTitulo);
+        }
+    
+        // Filtrar por temas (puede ser un array)
+        if (opciones.filtroTemas) {
+            opciones.filtroTemas.forEach(tema => queryParams.append("temas", tema));
+        }
+    
+        // Filtrar por especie
+        if (opciones.filtroEspecie) {
+            queryParams.append("especie", opciones.filtroEspecie);
+        }
+    
+ 
+    
+        return fetch(obtenerUrl(`articulos?${queryParams}`), { headers })
+            .then(procesarRespuesta)
+            .catch(manejarErrores);
+    }
+    
+
+    static getArticulo(idArticulo) {
+        return fetch(obtenerUrl(`articulos/${idArticulo}`), { headers })
+        .then(procesarRespuesta)
+        .catch(manejarErrores);
+    }
+    
 }
 
 
