@@ -31,6 +31,8 @@ export default class Producto{
         return texto.replace(/-/g, '<br>');
     }
 
+    
+
     mostrarEnCard(){
         return ` <div  class="card-articulo" id="${this.id}">
                             <div class="row">

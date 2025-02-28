@@ -31,6 +31,8 @@ import { imprimir,
      imprimir("articulosContainer", cardArticulos);
      console.log(cardArticulos);
 
+     console.log(this.imagen); // Debería mostrar la URL de la imagen
+
          // Agregamos evento click a cada card de productos
     document.querySelectorAll(".card-articulo").forEach((itemCard) => {
         console.log(itemCard)
