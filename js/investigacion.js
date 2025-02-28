@@ -19,11 +19,13 @@ import { imprimir,
             articulo.id,
             articulo.titulo,
             articulo.colgado,
-            articulo.fecha,
+            articulo.descripcion,
+            articulo.destacado,
             articulo.detalle,
+            articulo.fecha,
             articulo.imagen,
-            articulo.especie,
-            articulo.temas
+            articulo.temas.join(", "), // Une el array de temas en un string
+            articulo.especie.join(", ") // Une el array de especies en un string
          ).mostrarEnCard()
      )).join("");
 

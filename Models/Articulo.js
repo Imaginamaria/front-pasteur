@@ -1,4 +1,4 @@
-export default class Producto{
+export default class Articulo{
     id;
     titulo;
     colgado;
