@@ -14,28 +14,33 @@ import { imprimir,
 
     // para cada card de articulos, creamos una instancia de la clase Articulo y la mostramos
     const cardArticulos = data
-     .map((articulo) =>(
-         new Articulo(
-            articulo.id,
-            articulo.titulo,
-            articulo.colgado,
-            articulo.descripcion,
-            articulo.destacado,
-            articulo.detalle,
-            articulo.fecha,
-            articulo.imagen,
-            articulo.temas.join(", "), // Une el array de temas en un string
-            articulo.especie.join(", ") // Une el array de especies en un string
-         ).mostrarEnCard()
-     )).join("");
+        .filter((articulo) => {
+            // Verifica que el artículo tenga todas las propiedades necesarias
+            return articulo && articulo.id && articulo.titulo && articulo.imagen;
+        })
+        .map((articulo) => {
+            console.log("Imagen:", articulo.imagen); // Verifica la URL de la imagen
 
-     // imprimimos la card de producto en el elemento con id productosContainer
-     imprimir("articulosContainer", cardArticulos);
-     console.log(cardArticulos);
+            return new Articulo(
+                articulo.id,
+                articulo.titulo,
+                articulo.colgado,
+                articulo.descripcion,
+                articulo.destacado,
+                articulo.detalle,
+                articulo.fecha,
+                articulo.imagen,
+                articulo.temas?.join(", "), // Usa encadenamiento opcional para temas
+                articulo.especie?.join(", ") // Usa encadenamiento opcional para especies
+            ).mostrarEnCard();
+        })
+        .join("");
 
-     console.log(this.imagen); // Debería mostrar la URL de la imagen
+    // imprimimos la card de producto en el elemento con id productosContainer
+    imprimir("articulosContainer", cardArticulos);
+    console.log(cardArticulos);
 
-         // Agregamos evento click a cada card de productos
+    // Agregamos evento click a cada card de productos
     document.querySelectorAll(".card-articulo").forEach((itemCard) => {
         console.log(itemCard)
         itemCard.addEventListener("click", () => {
@@ -43,13 +48,11 @@ import { imprimir,
             window.location.replace(`articulo.html?id=${itemCard.id}`);
         });
     });
-     
- }
-
- const mostrarError = (error) => {
-    imprimir("articulosContainer-error", error);
 }
 
+const mostrarError = (error) => {
+    imprimir("articulosContainer-error", error);
+}
 
 // obtenemos las cards de articulos
 RequestsAPI.getArticulos().then(mostrarCardArticulos).catch(mostrarError);
