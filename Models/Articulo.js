@@ -38,7 +38,7 @@ export default class Articulo{
 
                             <!-- Línea separatoria en color primary -->
                             <hr class="border-primary">
-                            
+
                             <div class="row">
                                 <h6 class="text-dark">${this.fecha}</h6>
                             </div>
@@ -58,6 +58,30 @@ export default class Articulo{
 
                             </div>
                  </div>`       
+    }
+
+    mostrarEnDetalle(){
+        return `<header>
+                            <span class="fecha-publicacion">${this.fecha}</span>
+                            <h1 class="card-title text-primary">${this.titulo}</h1>
+                            <h2 class="card-title text-primary pb-2">${this.colgado}</h2>
+                </header>
+                        
+                <figure>
+                            <img src="${this.imagen}" class="img-fluid" alt="${this.especie}">
+                </figure>
+                        
+                <section class="descripcion">
+                            <p>${this.descripcion}</p>
+                </section>
+                        
+                <section class="contenido">
+                            <blockquote class="card-title text-primary pb-2">
+                            ${this.destacado}
+                            </blockquote>
+                            
+                            <p>${this.detalle}</p>
+                </section>`
     }
 
 
