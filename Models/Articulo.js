@@ -35,6 +35,10 @@ export default class Articulo{
 
     mostrarEnCard(){
         return ` <div  class="card-articulo" id="${this.id}">
+
+                            <!-- Línea separatoria en color primary -->
+                            <hr class="border-primary">
+                            
                             <div class="row">
                                 <h6 class="text-dark">${this.fecha}</h6>
                             </div>
