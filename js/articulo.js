@@ -1,4 +1,4 @@
-import Articulo from "../Models/Articulo";
+import Articulo from "../Models/Articulo.js";
 import { RequestsAPI } from "../RequestsAPI.js";
 import {
     imprimir,
