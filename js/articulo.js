@@ -38,7 +38,7 @@ const mostrarDetalle = (data) => {
         imprimir ("detalle" , articuloActual.mostrarEnDetalle());
 
             // Obtener y mostrar articulos relacionados, pasando el ID actual y las especies
-    obtenerArticulosRelacionados(articuloActual.temas, productoActual.id, productoActual.especies);
+   // obtenerArticulosRelacionados(articuloActual.temas, productoActual.id, productoActual.especies); este lo pongo cuando haga el div de articulos relacionados
     
 };
 
@@ -66,3 +66,16 @@ const obtenerArticulosRelacionados = async (temas, idActual, especies) => {
         mostrarError(error);
     }
 };
+
+
+// Obtenemos el articulo por su id y luego los articulos relacionados
+RequestsAPI.getArticulo(idArticulo)
+.then(data => {
+    if (!data) {
+        throw new Error("Articulo no encontrado");
+    }
+    mostrarDetalle(data);
+})
+.catch((error) => {
+    mostrarError(error);
+});
