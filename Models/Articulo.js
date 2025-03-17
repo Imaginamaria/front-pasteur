@@ -31,6 +31,11 @@ export default class Articulo{
         return texto.replace(/-/g, '<br>');
     }
 
+    // Función para crear el enlace al producto de forma dinámica
+     generarEnlaceProducto() {
+            return `${window.location.origin}/detalle-producto.html?id=${this.id}`;
+    }
+
     
 
     mostrarEnCard(){
@@ -72,7 +77,7 @@ export default class Articulo{
                 </header>
 
                 <section class="descripcion mb-4 px-3">
-                    <p class="lead text-primary fw-bold">${this.reemplazarDashesPorBr(this.descripcion)}</p>
+                    <p class="lead text-primary ">${this.reemplazarDashesPorBr(this.descripcion)}</p>
                 </section>
 
                 <section class="contenido px-3">
@@ -80,7 +85,10 @@ export default class Articulo{
                         ${this.reemplazarDashesPorBr(this.destacado)}
                     </blockquote>
                     <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
-                </section>`
+                </section>
+                <footer class="text-center mt-4">
+                    <a href="${enlaceProducto}" class="btn btn-primary">Ver Producto</a>
+                </footer>`
     }
 
 
