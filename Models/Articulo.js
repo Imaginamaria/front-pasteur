@@ -68,11 +68,11 @@ export default class Articulo{
                 <header class="text-center border-bottom border-primary pb-3 mb-4">
                     <span class="fecha-publicacion d-block text-muted small">${this.fecha}</span>
                     <h2 class="card-title text-primary fw-bold mt-2">${this.reemplazarDashesPorBr(this.titulo)}</h2>
-                    <h4 class="card-title">${this.colgado}</h4>
+                    <h4 class="card-title mt-2">${this.colgado}</h4>
                 </header>
 
                 <section class="descripcion mb-4 px-3">
-                    <p class="lead">${this.reemplazarDashesPorBr(this.descripcion)}</p>
+                    <p class="lead text-primary fw-bold">${this.reemplazarDashesPorBr(this.descripcion)}</p>
                 </section>
 
                 <section class="contenido px-3">
