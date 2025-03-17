@@ -572,6 +572,31 @@ a[href^="mailto:"]:active {
   margin-top: 20px;
 }
 
+//investigacion
+
+.fecha-publicacion {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.blockquote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-left: 4px solid var(--bs-primary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.descripcion p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contenido p {
+  line-height: 1.6;
+}
+
+
 
 // Ajustes para pantallas pequeñas
 @media (max-width: 768px) {

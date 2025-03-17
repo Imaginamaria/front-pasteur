@@ -61,28 +61,25 @@ export default class Articulo{
     }
 
     mostrarEnDetalle(){
-        return `<header>
-                            <span class="fecha-publicacion">${this.fecha}</span>
-                            <h1 class="card-title text-primary fw-bold pb-3">${this.titulo}</h1>
-                            <h2 class="card-title text-primary pb-2">${this.colgado}</h2>
-                </header>
-                        
-                <figure>
-                            <img src="${this.imagen}" class="img-fluid" alt="${this.especie}">
+        return `<figure class="mb-4 text-center">
+                <img src="${this.imagen}" class="img-fluid rounded shadow-lg" alt="${this.especie}">
                 </figure>
-                        
-                <section class="descripcion">
 
-                
-                            <p>${this.reemplazarDashesPorBr(this.descripcion)}</p>
+                <header class="text-center border-bottom border-primary pb-3 mb-4">
+                    <span class="fecha-publicacion d-block text-muted small">${this.fecha}</span>
+                    <h1 class="card-title text-primary fw-bold mt-2">${this.titulo}</h1>
+                    <h2 class="card-title text-secondary">${this.colgado}</h2>
+                </header>
+
+                <section class="descripcion mb-4 px-3">
+                    <p class="lead">${this.reemplazarDashesPorBr(this.descripcion)}</p>
                 </section>
-                        
-                <section class="contenido">
-                            <blockquote class="card-title text-primary fw-bold pb-3">
-                            ${this.reemplazarDashesPorBr(this.destacado)}
-                            </blockquote>
-                            
-                            <p>${this.detalle}</p>
+
+                <section class="contenido px-3">
+                    <blockquote class="blockquote text-primary fw-bold border-start border-primary ps-3">
+                        ${this.reemplazarDashesPorBr(this.destacado)}
+                    </blockquote>
+                    <p class="mt-3">${this.detalle}</p>
                 </section>`
     }
 
