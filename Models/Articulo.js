@@ -76,11 +76,10 @@ export default class Articulo{
                 </section>
 
                 <section class="contenido px-3">
-
-                    <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                     <blockquote class="blockquote text-primary fw-bold border-start border-primary ps-3">
                         ${this.reemplazarDashesPorBr(this.destacado)}
                     </blockquote>
+                    <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                 </section>`
     }
 
