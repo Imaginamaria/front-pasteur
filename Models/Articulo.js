@@ -67,8 +67,8 @@ export default class Articulo{
 
                 <header class="text-center border-bottom border-primary pb-3 mb-4">
                     <span class="fecha-publicacion d-block text-muted small">${this.fecha}</span>
-                    <h1 class="card-title text-primary fw-bold mt-2">${this.reemplazarDashesPorBr(this.titulo)}</h1>
-                    <h2 class="card-title">${this.colgado}</h2>
+                    <h2 class="card-title text-primary fw-bold mt-2">${this.reemplazarDashesPorBr(this.titulo)}</h2>
+                    <h4 class="card-title">${this.colgado}</h4>
                 </header>
 
                 <section class="descripcion mb-4 px-3">
@@ -76,10 +76,11 @@ export default class Articulo{
                 </section>
 
                 <section class="contenido px-3">
+
+                    <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                     <blockquote class="blockquote text-primary fw-bold border-start border-primary ps-3">
                         ${this.reemplazarDashesPorBr(this.destacado)}
                     </blockquote>
-                    <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                 </section>`
     }
 
