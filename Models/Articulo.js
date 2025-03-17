@@ -66,6 +66,9 @@ export default class Articulo{
     }
 
     mostrarEnDetalle(){
+
+        const enlaceProducto = this.generarEnlaceProducto(); // Obtenemos el enlace dinámico al producto
+
         return `<figure class="mb-4 text-center">
                 <img src="${this.imagen}" class="img-fluid rounded shadow-lg" alt="${this.especie}">
                 </figure>
@@ -86,7 +89,8 @@ export default class Articulo{
                     </blockquote>
                     <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                 </section>
-                <footer class="text-center mt-4">
+                <footer class="text-primary mt-4">
+                Para más información, consulte el producto en el siguiente enlace:
                     <a href="${enlaceProducto}" class="btn btn-primary">Ver Producto</a>
                 </footer>`
     }
