@@ -63,7 +63,7 @@ export default class Articulo{
     mostrarEnDetalle(){
         return `<header>
                             <span class="fecha-publicacion">${this.fecha}</span>
-                            <h1 class="card-title text-primary">${this.titulo}</h1>
+                            <h1 class="card-title text-primary fw-bold pb-3">${this.titulo}</h1>
                             <h2 class="card-title text-primary pb-2">${this.colgado}</h2>
                 </header>
                         
@@ -72,12 +72,14 @@ export default class Articulo{
                 </figure>
                         
                 <section class="descripcion">
-                            <p>${this.descripcion}</p>
+
+                
+                            <p>${this.reemplazarDashesPorBr(this.descripcion)}</p>
                 </section>
                         
                 <section class="contenido">
-                            <blockquote class="card-title text-primary pb-2">
-                            ${this.destacado}
+                            <blockquote class="card-title text-primary fw-bold pb-3">
+                            ${this.reemplazarDashesPorBr(this.destacado)}
                             </blockquote>
                             
                             <p>${this.detalle}</p>
