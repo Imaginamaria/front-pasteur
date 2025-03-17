@@ -23,6 +23,22 @@ const mostrarDetalle = (data) => {
         // limpiamos el error en caso de que exista
         imprimir ("detalle-error", "");
 
+        // Extraer el id del producto del campo "detalle"
+        const idProducto = data.detalle.match(/id=(\d+)/); // Busca el patrón "id=X" en el detalle
+
+         let detalleConEnlace = data.detalle;
+
+         if (idProducto && idProducto[1]) {
+            const baseURL = window.location.origin;  // Obtiene el dominio actual
+            const urlProducto = `${baseURL}/detalle-producto.html?id=${idProducto[1]}`; // Ruta dinámica del producto
+    
+            // Reemplazar "id=..." en el texto con un enlace
+            detalleConEnlace = detalleConEnlace.replace(
+                new RegExp(`/detalle-producto.html?id=${idProducto[1]}`, 'g'),  // Buscar la mención del id
+                `<a href="${urlProducto}" class="btn btn-secondary">Ver Producto</a>`
+            );
+        }
+
         const articuloActual = new Articulo (
             data.id && !isNaN(data.id) ? parseInt(data.id) : null,  // Verifica si id es válido
             data.titulo,
