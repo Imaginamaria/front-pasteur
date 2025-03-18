@@ -91,8 +91,8 @@ export default class Articulo{
                     </blockquote>
                     <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                 </section>
-                <footer class="text-primary mt-4">
-                Para más información, consulte el producto en el siguiente enlace:
+                <footer class="text-primary mb-4 mt-4">
+                Para más información, consulte el producto en el siguiente enlace:<br>
                     <a href="${enlaceProducto}" class="btn btn-secondary">Ver Producto</a>
                 </footer>`
     }
