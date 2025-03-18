@@ -31,7 +31,8 @@ import { imprimir,
                 articulo.fecha,
                 articulo.imagen,
                 articulo.temas?.join(", "), // Usa encadenamiento opcional para temas
-                articulo.especie?.join(", ") // Usa encadenamiento opcional para especies
+                articulo.especie?.join(", "), // Usa encadenamiento opcional para especies
+                articulo.link?.join(", ") // Usa encadenamiento opcional para productos
             ).mostrarEnCard();
         })
         .join("");
