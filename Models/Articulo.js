@@ -9,7 +9,8 @@ export default class Articulo{
     imagen;
     temas;
     especie;
-    constructor(id=0, titulo="", colgado="", descripcion="", destacado="", detalle="", fecha="", imagen="", temas="", especie=""){
+    link;
+    constructor(id=0, titulo="", colgado="", descripcion="", destacado="", detalle="", fecha="", imagen="", temas="", especie="", link="") {
         this.id=id;
         this.titulo=titulo;
         this.colgado=colgado;
@@ -20,6 +21,7 @@ export default class Articulo{
         this.imagen=imagen;
         this.temas=temas;
         this.especie=especie;
+        this.link=link;
     }
 
     capitalizarPrimeraLetra(texto){
@@ -91,7 +93,7 @@ export default class Articulo{
                 </section>
                 <footer class="text-primary mt-4">
                 Para más información, consulte el producto en el siguiente enlace:
-                    <a href="${enlaceProducto}" class="btn btn-primary">Ver Producto</a>
+                    <a href="${enlaceProducto}" class="btn btn-secondary">Ver Producto</a>
                 </footer>`
     }
 
