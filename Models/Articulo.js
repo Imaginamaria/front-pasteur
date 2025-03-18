@@ -35,7 +35,7 @@ export default class Articulo{
 
     // Función para crear el enlace al producto de forma dinámica
      generarEnlaceProducto() {
-            return `${window.location.origin}/detalle-producto.html?id=${this.id}`;
+            return `${window.location.origin}${this.link}`;
     }
 
     
@@ -44,7 +44,7 @@ export default class Articulo{
         return ` <div  class="card-articulo" id="${this.id}">
 
                             <!-- Línea separatoria en color primary -->
-                            <hr class="border-primary">
+                            <hr class="border-secondary">
 
                             <div class="row">
                                 <h6 class="text-dark">${this.fecha}</h6>
