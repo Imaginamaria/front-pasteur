@@ -93,7 +93,7 @@ export default class Articulo{
                 </section>
                 <footer class="text-primary px-3 mb-4 mt-4">
                 Para más información, consulte el producto en el siguiente enlace:<br>
-                    <a href="${enlaceProducto}" class="btn btn-secondary">Ver Producto</a>
+                    <a href="${enlaceProducto}" class="btn btn-secondary mt-3">Ver Producto</a>
                 </footer>`
     }
 
