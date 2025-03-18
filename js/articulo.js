@@ -49,7 +49,7 @@ const mostrarDetalle = (data) => {
             data.fecha,
             data.imagen,
             data.temas?.join(", "), // Usa encadenamiento opcional para temas
-            data.especies?.join(", ") // Usa encadenamiento opcional para especies
+            data.especies?.join(", "), // Usa encadenamiento opcional para especies
             data.link?.join(", ") // Usa encadenamiento opcional para link de productos
         )
         imprimir ("detalle" , articuloActual.mostrarEnDetalle());
