@@ -84,6 +84,47 @@ const obtenerArticulosRelacionados = async (temas, idActual, especies) => {
     }
 };
 
+// aside temas
+function actualizarAcordeon(temas) {
+    // Ordenamos los temas de mayor a menor según su id
+    temas.sort((a, b) => b.id - a.id);
+
+    temas.forEach(tema => {
+        // Obtenemos el UL correspondiente según el nombre del tema
+        let ulId = "";
+        switch (tema.titulo) {
+            case "Salud Animal":
+                ulId = "salud";
+                break;
+            case "Biotecnología":
+                ulId = "biotecnologia";
+                break;
+            case "Investigación Veterinaria":
+                ulId = "investigacion";
+                break;
+            case "Desarrollo de Productos":
+                ulId = "desarrollo";
+                break;
+            default:
+                console.warn(`No se encontró una lista para el tema: ${temas.titulo}`);
+                return;
+        }
+
+        // Seleccionamos la lista UL correspondiente
+        const ul = document.getElementById(ulId);
+        if (ul) {
+            ul.innerHTML = ""; // Limpiamos el UL antes de agregar los nuevos temas
+
+            // Agregamos los temas ordenados
+            temas.articulos.forEach(articulo => {
+                const li = document.createElement("li");
+                li.textContent = `Artículo ${articulo.id}: ${articulo.titulo}`;
+                ul.appendChild(li);
+            });
+        }
+    });
+};
+
 
 // Obtenemos el articulo por su id y luego los articulos relacionados
 RequestsAPI.getArticulo(idArticulo)
