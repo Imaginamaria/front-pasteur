@@ -163,38 +163,11 @@ static urlBaseBackend = "https://apipasteur-back.onrender.com";
     }
     
 
-   // static getArticulo(idArticulo) {
-   //     return fetch(obtenerUrl(`articulos/${idArticulo}`), { headers })
-   //     .then(procesarRespuesta)
-   //     .catch(manejarErrores);
-   // }
-
-   static getArticulos(opciones = {}) {
-    const queryParams = new URLSearchParams();
-
-    // Filtrar por título
-    if (opciones.filtroTitulo) {
-        queryParams.append("titulo", opciones.filtroTitulo);
-    }
-
-    // Filtrar por temas (puede ser un array)
-    if (opciones.filtroTemas) {
-        opciones.filtroTemas.forEach(tema => queryParams.append("temas", tema));
-    }
-
-    // Filtrar por especie
-    if (opciones.filtroEspecie) {
-        queryParams.append("especie", opciones.filtroEspecie);
-    }
-
-    return fetch(obtenerUrl(`articulos?${queryParams}`), { headers })
+    static getArticulo(idArticulo) {
+        return fetch(obtenerUrl(`articulos/${idArticulo}`), { headers })
         .then(procesarRespuesta)
-        .catch((error) => {
-            manejarErrores(error);
-            throw error;  // Vuelve a lanzar el error después de manejarlo
-        });
-}
-
+        .catch(manejarErrores);
+    }
     
 }
 
