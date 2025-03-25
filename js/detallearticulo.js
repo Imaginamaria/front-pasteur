@@ -46,16 +46,19 @@ const mostrarDetalle = (data) => {
             data.colgado,
             data.descripcion,
             data.destacado,
-            data.detalle,
+            detalleConEnlace, // Usar el detalle con enlace modificado
             data.fecha,
             data.imagen,
-            Array.isArray(data.temas) ? data.temas.join(", ") : "", // 👈 Aquí convertimos el array a string
+            Array.isArray(data.temas) ? data.temas : [], // 👈 Convertimos los temas a un array si no lo son
             data.especies?.join(", "), // Usa encadenamiento opcional para especies
             data.link?.join(", ") // Usa encadenamiento opcional para link de productos
         )
         console.log("Temas en articuloActual:", articuloActual.temas); // 👈 Verificamos si los temas se asignan bien
 
         imprimir ("detalle" , articuloActual.mostrarEnDetalle());
+
+            // Actualizar el acordeón con los temas y el artículo actual
+            actualizarAcordeon(articuloActual.temas, articuloActual);
 
             // Obtener y mostrar articulos relacionados, pasando el ID actual y las especies
    // obtenerArticulosRelacionados(articuloActual.temas, productoActual.id, productoActual.especies); este lo pongo cuando haga el div de articulos relacionados
@@ -89,11 +92,16 @@ const obtenerArticulosRelacionados = async (temas, idActual, especies) => {
 
 // acordion temas
 function actualizarAcordeon(temas, articulo) {
-    temas.forEach(temas => {
+    if (!Array.isArray(temas) || temas.length === 0) {
+        console.warn("No hay temas válidos para actualizar el acordeón.");
+        return;
+    }
+
+    temas.forEach((tema) => {
         let ulId = "";
-        switch (temas) { 
+        switch (tema.trim()) { 
             case "Sanidad Animal":
-                ulId = "sanidad";
+                ulId = "salud";
                 break;
             case "Biotecnología":
                 ulId = "biotecnologia";
@@ -105,7 +113,7 @@ function actualizarAcordeon(temas, articulo) {
                 ulId = "desarrollo";
                 break;
             default:
-                console.warn(`No se encontró una lista para el tema: ${temas}`);
+                console.warn(`No se encontró una lista para el tema: ${tema}`);
                 return;
         }
 
@@ -114,11 +122,12 @@ function actualizarAcordeon(temas, articulo) {
         if (ul) {
             // Crear un elemento <li> para agregar el título del artículo
             const li = document.createElement("li");
-            li.innerHTML = `<a href="${articulo.link}">${articulo.titulo}</a>`; // 👈 Agrega el título como un enlace
+            li.innerHTML = `<a href="articulo.html?id=${articulo.id}">${articulo.titulo}</a>`; // 👈 Agrega el título como un enlace dinámico
             ul.appendChild(li); // Agregar el <li> a la lista
         }
     });
 }
+
 ;
 
 
