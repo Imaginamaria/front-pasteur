@@ -165,9 +165,19 @@ static urlBaseBackend = "https://apipasteur-back.onrender.com";
 
     static getArticulo(idArticulo) {
         return fetch(obtenerUrl(`articulos/${idArticulo}`), { headers })
-        .then(procesarRespuesta)
-        .catch(manejarErrores);
+            .then(procesarRespuesta)
+            .then(data => {
+                if (!data) {
+                    throw new Error("Artículo no encontrado");
+                }
+    
+                mostrarDetalle(data);
+                actualizarAcordeon(data.temas, data); // Se pasa `data` para extraer el título
+                return data; // Retorna el artículo en caso de necesitarlo en otro lugar
+            })
+            .catch(manejarErrores);
     }
+    
     
 }
 

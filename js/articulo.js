@@ -87,17 +87,13 @@ const obtenerArticulosRelacionados = async (temas, idActual, especies) => {
     }
 };
 
-// aside temas
-function actualizarAcordeon(temas) {
-    // Ordenamos los temas de mayor a menor según su id
-    temas.sort((a, b) => b.id - a.id);
-
-    temas.forEach(tema => {
-        // Obtenemos el UL correspondiente según el nombre del tema
+// acordion temas
+function actualizarAcordeon(temas, articulo) {
+    temas.forEach(temas => {
         let ulId = "";
-        switch (tema.titulo) {
-            case "Salud Animal":
-                ulId = "salud";
+        switch (temas) { 
+            case "Sanidad Animal":
+                ulId = "sanidad";
                 break;
             case "Biotecnología":
                 ulId = "biotecnologia";
@@ -109,24 +105,21 @@ function actualizarAcordeon(temas) {
                 ulId = "desarrollo";
                 break;
             default:
-                console.warn(`No se encontró una lista para el tema: ${temas.titulo}`);
+                console.warn(`No se encontró una lista para el tema: ${temas}`);
                 return;
         }
 
-        // Seleccionamos la lista UL correspondiente
+        // Obtener el elemento UL correspondiente
         const ul = document.getElementById(ulId);
         if (ul) {
-            ul.innerHTML = ""; // Limpiamos el UL antes de agregar los nuevos temas
-
-            // Agregamos los artículos para cada tema
-            tema.articulos.forEach(articulo => {
-                const li = document.createElement("li");
-                li.textContent = `Artículo ${articulo.id}: ${articulo.titulo}`;
-                ul.appendChild(li);
-            });
+            // Crear un elemento <li> para agregar el título del artículo
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${articulo.link}">${articulo.titulo}</a>`; // 👈 Agrega el título como un enlace
+            ul.appendChild(li); // Agregar el <li> a la lista
         }
     });
-};
+}
+;
 
 
 // Obtenemos el articulo por su id y luego los articulos relacionados
