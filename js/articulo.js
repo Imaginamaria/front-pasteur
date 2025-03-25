@@ -115,8 +115,8 @@ function actualizarAcordeon(temas) {
         if (ul) {
             ul.innerHTML = ""; // Limpiamos el UL antes de agregar los nuevos temas
 
-            // Agregamos los temas ordenados
-            temas.articulos.forEach(articulo => {
+            // Agregamos los artículos para cada tema
+            tema.articulos.forEach(articulo => {
                 const li = document.createElement("li");
                 li.textContent = `Artículo ${articulo.id}: ${articulo.titulo}`;
                 ul.appendChild(li);
