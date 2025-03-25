@@ -20,6 +20,7 @@ const mostrarError = (error) => {
 
 // funcion para mostrar el detalle del articulo
 const mostrarDetalle = (data) => {
+        console.log("Temas recibidos:", data.temas); // 👈 Aquí vemos qué llega desde la API
         // limpiamos el error en caso de que exista
         imprimir ("detalle-error", "");
 
@@ -48,10 +49,12 @@ const mostrarDetalle = (data) => {
             data.detalle,
             data.fecha,
             data.imagen,
-            data.temas?.join(", "), // Usa encadenamiento opcional para temas
+            Array.isArray(data.temas) ? data.temas.join(", ") : "", // 👈 Aquí convertimos el array a string
             data.especies?.join(", "), // Usa encadenamiento opcional para especies
             data.link?.join(", ") // Usa encadenamiento opcional para link de productos
         )
+        console.log("Temas en articuloActual:", articuloActual.temas); // 👈 Verificamos si los temas se asignan bien
+
         imprimir ("detalle" , articuloActual.mostrarEnDetalle());
 
             // Obtener y mostrar articulos relacionados, pasando el ID actual y las especies
