@@ -163,7 +163,9 @@ mostrarEnDetalle() {
             <h5 class="text-primary fw-bold">Recomendaciones:</h5>
             <p class="detalle-ampliacion fs-5">${this.reemplazarDashesPorBr(this.recomendaciones)}</p>
 
-            <button class="btn" onclick="event.stopPropagation(); window.location.href='/contacto.html'">Más Información</button>
+            
+
+            <button class="btn btn-secondary stretched-link fw-bold" onclick="event.stopPropagation(); window.location.href='/contacto.html'">Más Información</button>
 
         </div>
     </div>
