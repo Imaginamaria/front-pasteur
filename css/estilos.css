@@ -13537,6 +13537,10 @@ a[href^="mailto:"]:active {
   line-height: 1.6;
 }
 
+#myaccordion {
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
   #navbarNavDropdown {
     background-color: #0F4486;
