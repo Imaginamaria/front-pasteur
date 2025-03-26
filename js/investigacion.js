@@ -1,26 +1,24 @@
 import Articulo from "../Models/Articulo.js";
 import { RequestsAPI } from "../RequestsAPI.js";
-import { imprimir,
-    obtenerValorInput,
+import {
+    imprimir,
     validarSesion,
-    eventoClickCerrarSesion
- } from "../utils/functions.js";
+    eventoClickCerrarSesion,
+} from "../utils/functions.js";
 
-
- const mostrarCardArticulos = (data) => {
+// Función para mostrar las tarjetas de artículos en la página principal
+const mostrarCardArticulos = (data) => {
     console.log(data);
-    // limpiamos el error si existe
+    // Limpiamos el error si existe
     imprimir("articulosContainer-error", "");
 
-    // para cada card de articulos, creamos una instancia de la clase Articulo y la mostramos
+    // Para cada artículo, creamos una instancia de la clase Articulo y la mostramos
     const cardArticulos = data
         .filter((articulo) => {
             // Verifica que el artículo tenga todas las propiedades necesarias
             return articulo && articulo.id && articulo.titulo && articulo.imagen;
         })
         .map((articulo) => {
-            console.log("Imagen:", articulo.imagen); // Verifica la URL de la imagen
-
             return new Articulo(
                 articulo.id,
                 articulo.titulo,
@@ -30,39 +28,38 @@ import { imprimir,
                 articulo.detalle,
                 articulo.fecha,
                 articulo.imagen,
-                articulo.temas?.join(", "), // Usa encadenamiento opcional para temas
-                articulo.especie?.join(", "), // Usa encadenamiento opcional para especies
-                articulo.link?.join(", ") // Usa encadenamiento opcional para productos
+                Array.isArray(articulo.temas) ? articulo.temas.join(", ") : "",
+                Array.isArray(articulo.especie) ? articulo.especie.join(", ") : "",
+                Array.isArray(articulo.link) ? articulo.link.join(", ") : ""
             ).mostrarEnCard();
         })
         .join("");
 
-    // imprimimos la card de producto en el elemento con id productosContainer
+    // Imprimimos las tarjetas de artículos en el contenedor correspondiente
     imprimir("articulosContainer", cardArticulos);
-    console.log(cardArticulos);
 
-    // Agregamos evento click a cada card de productos
+    // Agregamos evento click a cada tarjeta de artículo
     document.querySelectorAll(".card-articulo").forEach((itemCard) => {
-        console.log(itemCard)
         itemCard.addEventListener("click", () => {
-            // Redirigimos a la página de detalle del producto
+            // Redirigimos a la página de detalle del artículo
             window.location.replace(`articulo.html?id=${itemCard.id}`);
         });
     });
-}
+};
 
+// Función para mostrar errores en pantalla
 const mostrarError = (error) => {
     imprimir("articulosContainer-error", error);
-}
+};
 
-// Acordion temas
+// Función para actualizar el contenido del acordeón con los artículos y sus temas
 function actualizarAcordeon(articulos) {
     if (!Array.isArray(articulos) || articulos.length === 0) {
         console.warn("No hay artículos válidos para actualizar el acordeón.");
         return;
     }
 
-    articulos.forEach(articulo => {
+    articulos.forEach((articulo) => {
         if (!Array.isArray(articulo.temas) || articulo.temas.length === 0) {
             console.warn(`El artículo "${articulo.titulo}" no tiene temas válidos.`);
             return;
@@ -96,30 +93,23 @@ function actualizarAcordeon(articulos) {
             }
         });
     });
-};
+}
 
-// Función para inicializar la página
+// Función para inicializar la página: cargar artículos y actualizar el acordeón
 async function inicializarPagina() {
     try {
         const articulos = await RequestsAPI.getArticulos();
+
+        // Actualizar el acordeón con todos los artículos disponibles
         actualizarAcordeon(articulos);
 
-        // Obtenemos el artículo por su id y luego los articulos relacionados
-        RequestsAPI.getArticulo(idArticulo)
-            .then(data => {
-                if (!data) {
-                    throw new Error("Articulo no encontrado");
-                }
-                mostrarDetalle(data);
-            })
-            .catch((error) => {
-                mostrarError(error);
-            });
+        // Mostrar las tarjetas de artículos en la página principal
+        mostrarCardArticulos(articulos);
     } catch (error) {
         console.error("Error al inicializar la página:", error);
-        mostrarError("Error al cargar la página. Por favor, intenta nuevamente."); // Mostrar mensaje de error en la interfaz
+        mostrarError("Error al cargar la página. Por favor, intenta nuevamente.");
     }
 }
 
-// obtenemos las cards de articulos
-RequestsAPI.getArticulos().then(mostrarCardArticulos).catch(mostrarError);
+// Llamar a la función para inicializar la página al cargarla
+inicializarPagina();
