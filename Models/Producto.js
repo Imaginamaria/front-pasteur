@@ -124,7 +124,7 @@ mostrarEnDetalle() {
     return `<div class="row">
 
                     <div class="titulo-detalle">
-                     <h5 class="fw-bold mt-5 mb-2 text-primary ">${this.lineaterapeutica.map(item => this.capitalizarPrimeraLetra(item)).join(' / ')}<i class="bi bi-chevron-right"></i></h5>
+                     <h5 class="fw-bold mt-5 mb-2 text-primary border-bottom border-secondary pb-2">${this.lineaterapeutica.map(item => this.capitalizarPrimeraLetra(item)).join(' / ')}<i class="bi bi-chevron-right"></i></h5>
 
                      
                 </div>
