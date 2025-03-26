@@ -108,22 +108,122 @@
                     <div id="articulosContainer-error" class="row pt-3 pb-3 error"></div>
 
                     <!-- Sidebar -->
-                    <div class="col-md-4 ">
-                        <aside class="sidebar ms-2">
+                    <div class="col-md-4">
+                        <!--<aside class="sidebar">
                             <h6 class="card-title text-primary">Temas de Interés</h6>
                             <ul class="pt-3 pb-3" id="temas">
                                 <li>Salud Animal</li>
                                 <li>Biotecnología</li>
                                 <li>Investigación Veterinaria</li>
                                 <li>Desarrollo de Productos</li>
+
                             </ul>
-                            <h6 class="card-title text-primary mt-2">Publicaciones Recientes</h6>
-                            <ul class="pt-3 pb-3" id="publicaciones">
+                                <h6 class="card-title text-primary mt-2">Publicaciones Recientes</h6>
+                                <ul class="pt-3 pb-3" id="publicaciones">
                                 <li>Artículo 1</li>
                                 <li>Artículo 2</li>
                                 <li>Artículo 3</li>
                             </ul>
-                        </aside>
+                        </aside>-->
+
+                        <!-- Accordion -->
+                        <div id="myaccordion" class="accordion" id="accordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button
+                                  class="accordion-button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#collapseOne"
+                                >
+                                Salud Animal
+                                </button>
+                              </h2>
+                              <div
+                                id="collapseOne"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#myaccordion"
+                              >
+                                <div class="accordion-body">
+                                    <ul id="salud">
+                                        
+  
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button
+                                  class="accordion-button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#collapseTwo"
+                                >
+                                Biotecnología
+                                </button>
+                              </h2>
+                              <div
+                                id="collapseTwo"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#myaccordion"
+                              >
+                                <div class="accordion-body">
+                                    <ul id="biotecnologia">
+                                        
+  
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button
+                                  class="accordion-button"
+                                  data-bs-toggle="collapse"
+                                  data-bs-target="#collapseThree"
+                                >
+                                Investigación Veterinaria
+                                </button>
+                              </h2>
+                              <div
+                                id="collapseThree"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#myaccordion"
+                              >
+                                <div class="accordion-body">
+                                  <ul id="investigacion">
+                                    
+
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button
+                                    class="accordion-button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree"
+                                  >
+                                  Desarrollo de Productos
+                                  </button>
+                                </h2>
+                                <div
+                                  id="collapseThree"
+                                  class="accordion-collapse collapse show"
+                                  data-bs-parent="#myaccordion"
+                                >
+                                  <div class="accordion-body">
+                                    <ul id="desarrollo">
+                                        
+  
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
                     </div>
                 </div>
             </div>
