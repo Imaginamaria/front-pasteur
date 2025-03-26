@@ -124,7 +124,7 @@ mostrarEnDetalle() {
     return `<div class="row">
 
                     <div class="titulo-detalle">
-                     <h5 class="fw-bold mt-5 mb-2 text-primary border-bottom border-secondary pb-2">${this.lineaterapeutica.map(item => this.capitalizarPrimeraLetra(item)).join(' / ')}<i class="bi bi-chevron-right"></i></h5>
+                     <h5 class="fw-bold mt-5 mb-2 text-primary border-bottom border-3 border-secondary pb-2">${this.lineaterapeutica.map(item => this.capitalizarPrimeraLetra(item)).join(' / ')}<i class="bi bi-chevron-right"></i></h5>
 
                      
                 </div>
@@ -165,7 +165,7 @@ mostrarEnDetalle() {
 
             
 
-            <button class="btn btn-secondary stretched-link fw-bold" onclick="event.stopPropagation(); window.location.href='/contacto.html'">Más Información</button>
+            <button class="btn btn-secondary mt-3 fw-bold" onclick="event.stopPropagation(); window.location.href='/contacto.html'">Más Información</button>
 
         </div>
     </div>
