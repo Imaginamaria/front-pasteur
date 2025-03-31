@@ -13387,13 +13387,13 @@ a[href^="mailto:"]:active {
   color: var(--bs-secondary); /* Usa el color de Bootstrap $secondary */
 }
 
-#vademecum, #investigacion {
+#vademecum, #investigacion, #novedades, #empresa {
   margin-top: 210px;
 }
 
 .titulo-vademecum,
 .investigacion {
-  width: 70%;
+  width: 100%;
   padding-bottom: 10px;
 }
 
