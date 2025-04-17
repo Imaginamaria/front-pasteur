@@ -13106,10 +13106,22 @@ a:active {
   border: none; /* Sin borde por defecto */
 }
 
-.boton-especie .img-container:hover {
+.boton-especie .img-container {
+  transition: transform 0.3s, background-color 0.3s;
+  border-radius: 8px;
+}
+
+.boton-especie .img-container:hover,
+.boton-especie .img-container:focus,
+.boton-especie .img-container.active {
   background-color: rgba(15, 68, 134, 0.5);
   cursor: pointer;
   transform: scale(1.05);
+  outline: none;
+}
+
+.boton-especie .img-container:focus {
+  outline: none;
 }
 
 .img-container {
@@ -13576,7 +13588,7 @@ a[href^="mailto:"]:active {
     padding: 20px; /* Aplica el padding solo al contenedor */
     margin: 15px;
   }
-  .titulo-vademecum, .titulo-zafra, .titulo-investigacion, .titulo-empresa, .titulo-relacionados {
+  .titulo-vademecum, .titulo-zafra, .titulo-empresa, .titulo-relacionados {
     width: 100%;
   }
   .footer-contenido .redes,

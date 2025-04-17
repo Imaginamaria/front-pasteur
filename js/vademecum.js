@@ -89,13 +89,27 @@ const filtrarPorEspecie = (especieSeleccionada) => {
     }).catch(mostrarError);
 };
 
-// Configuramos los eventos de clic en los botones de especies
-document.querySelectorAll(".boton-especie").forEach((boton) => {
-    boton.addEventListener("click", () => {
-        const especieSeleccionada = boton.dataset.especie; // Obtenemos la especie del atributo data-especie
-        filtrarPorEspecie(especieSeleccionada);
+// Configuramos los eventos de clic en los botones de especies y activemos la especie correspondiente
+document.querySelectorAll('.boton-especie').forEach(boton => {
+    boton.addEventListener('click', function () {
+      // Primero, eliminamos la clase 'active' de todos los botones de especie
+      document.querySelectorAll('.boton-especie .img-container').forEach(container => {
+        container.classList.remove('active');
+      });
+  
+      // Luego, agregamos la clase 'active' solo al .img-container del botón clickeado
+      this.querySelector('.img-container').classList.add('active');
+    
+      // Filtramos los productos según la especie
+      const especie = this.dataset.especie;
+      console.log("Filtrando productos para:", especie);
+      filtrarPorEspecie(especie);
     });
-});
+  });
+  
+  
+
+
 
 // aca van los filtros
 document.querySelector("#boton-filtro").addEventListener("click", ()=>{
