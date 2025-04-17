@@ -49,7 +49,7 @@ export default class Producto{
     }
 
     mostrarEnCard(){
-        return `<div class="col-md-3 producto-card " id="${this.id}">  
+        return `<div class="col-xl-3 col-md-6 col-sm-12 producto-card " id="${this.id}">  
                             <div class="card">
                                 <img src="${this.imagen}" class="card-img-top" alt="${this.nombre}">
                                 <div class="card-body" style="border-top: 4px solid #CB1733;">
@@ -174,7 +174,7 @@ mostrarEnDetalle() {
 
     <div class="row">
         <div class="col-md-12">
-<div id="calculadora" class="p-5 bg-light text-dark">
+<div id="calculadora" class="p-5 p-md-0 bg-light text-dark">
     <h3 class="fw-bold text-primary mb-1">Calculadora de Producto</h3>
     <p class="text-primary">Ingrese los datos para calcular la cantidad a comprar.</p>
 
