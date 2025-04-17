@@ -278,7 +278,7 @@ a {
   height: 100%;
 }
 
-.row.g-4 .col-md-3 {
+.row .g-4 .col-md-3 {
   display: flex;
   flex-direction: column;
 }
@@ -658,7 +658,7 @@ a[href^="mailto:"]:active {
     margin: 15px;
   }
 
-  .titulo-vademecum{
+  .titulo-vademecum , .titulo-zafra , .titulo-investigacion, .titulo-empresa , .titulo-relacionados{
     width: 100%;}
 
 
@@ -702,7 +702,7 @@ a[href^="mailto:"]:active {
 
 @media (max-width: 1200px) {
   .carousel-caption h2 {
-    font-size: 2.5rem; /* Ajuste de tamaño en pantallas medianas */
+    font-size: 2.5rem; 
     margin-bottom: 10px;
   }
 
