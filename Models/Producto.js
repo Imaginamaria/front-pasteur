@@ -174,7 +174,7 @@ mostrarEnDetalle() {
 
     <div class="row">
         <div class="col-md-12">
-<div id="calculadora" class="p-5 p-md-0 bg-light text-dark">
+<div id="calculadora" class="p-xl-5 p-md-0 bg-light text-dark">
     <h3 class="fw-bold text-primary mb-1">Calculadora de Producto</h3>
     <p class="text-primary">Ingrese los datos para calcular la cantidad a comprar.</p>
 
