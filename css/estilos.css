@@ -13562,6 +13562,9 @@ a[href^="mailto:"]:active {
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.199);
   }
+  .hero {
+    margin-top: 138px; /* Ajusta este valor según la altura de tu navbar */
+  }
   .carousel-caption {
     transform: translate(-50%, -50%);
     max-width: 90%;
@@ -13613,18 +13616,18 @@ a[href^="mailto:"]:active {
 }
 @media (max-width: 1200px) {
   .carousel-caption h2, .carousel-caption .h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
   }
   .carousel-caption p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .carousel-caption .btn {
     font-size: 1rem;
   }
-}
-.carousel-item img {
-  object-fit: cover;
-  object-position: 40% 40%;
-  height: 100%;
+  .carousel-item img {
+    object-fit: cover;
+    object-position: 40% 40%;
+    height: 100%;
+  }
 }

@@ -615,13 +615,13 @@ a[href^="mailto:"]:active {
 
 
 
+
+
 // Ajustes para pantallas pequeñas
 @media (max-width: 768px) {
 
   #navbarNavDropdown{
     background-color: $primary;
-
-    
     text-align: center;
 
   }
@@ -631,7 +631,10 @@ a[href^="mailto:"]:active {
   .navbar .nav-link{
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.199);
+  }
 
+  .hero {
+    margin-top: 138px; /* Ajusta este valor según la altura de tu navbar */
   }
 
 
@@ -714,23 +717,30 @@ a[href^="mailto:"]:active {
 
 
 @media (max-width: 1200px) {
+
+
+  
   .carousel-caption h2 {
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     margin-bottom: 10px;
   }
 
   .carousel-caption p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .carousel-caption .btn {
     font-size: 1rem;
   }
+
+  .carousel-item img {
+    // height: 700px;
+    object-fit: cover;
+    object-position: 40% 40%;
+    height: 100%;
+  }
 }
 
-.carousel-item img {
-  // height: 700px;
-  object-fit: cover;
-  object-position: 40% 40%;
-  height: 100%;
-}
+
+
+
