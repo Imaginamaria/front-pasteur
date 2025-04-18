@@ -14774,6 +14774,9 @@ a[href^="mailto:"]:active {
   .titulo-vademecum, .titulo-zafra, .titulo-empresa, .titulo-relacionados {
     width: 100%;
   }
+  #empresa, #chinfield {
+    margin-top: 0px;
+  }
   .footer-contenido .redes,
   .footer-contenido .newsletter {
     text-align: center; /* Centra el texto dentro de estas secciones */
