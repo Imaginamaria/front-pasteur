@@ -380,6 +380,17 @@ a {
   text-align: center;
 }
 
+.pie-pagina .nav {
+  flex-wrap: wrap; // permite que se acomoden si no hay espacio
+  gap: 0.5rem;
+}
+
+
+
+
+
+
+
 a[href^="mailto:"] {
   color: white; /* Asegura que el color sea blanco */
   text-decoration: none; /* Elimina el subrayado */
@@ -410,24 +421,7 @@ a[href^="mailto:"]:active {
 
 }
 
-// empresa
 
-.footer-contenido {
-  flex-direction: row; /* Cambia a fila en pantallas más grandes */
-}
-.social-container{
-  gap: 12px;
-}
-
-.social-container .social-icon i {
-  font-size: 40px; /* Ajusta el tamaño */
-  transition: color 0.3s ease;
-  
-}
-
-.social-container .social-icon:hover i {
-  color: var(--bs-secondary); /* Usa el color de Bootstrap $secondary */
-}
 
 
 
@@ -613,7 +607,40 @@ a[href^="mailto:"]:active {
   max-width: 100%;
 }
 
+// footer
 
+.footer-contenido {
+  flex-direction: row; /* Cambia a fila en pantallas más grandes */
+}
+.social-container{
+  gap: 12px;
+}
+
+.social-container .social-icon i {
+  font-size: 40px; /* Ajusta el tamaño */
+  transition: color 0.3s ease;
+  
+}
+
+.social-container .social-icon:hover i {
+  color: var(--bs-secondary); /* Usa el color de Bootstrap $secondary */
+}
+
+.footer-nav {
+  border-top: solid 2px $secondary;
+}
+
+.footer-nav .nav-link {
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+}
+
+.footer-nav .nav-link:hover,
+.footer-nav .nav-link:focus,
+.footer-nav .nav-link:active {
+  color: $secondary !important;
+  
+}
 
 
 
@@ -712,6 +739,12 @@ a[href^="mailto:"]:active {
 .footer-contenido .btn {
   font-size: 0.8rem; 
 }
+
+.pie-pagina .nav {
+  flex-direction: column;
+  align-items: center;
+}
+
 }
 
 

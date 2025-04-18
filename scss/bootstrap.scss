@@ -42,6 +42,7 @@ $spacers: (
 $line-height-base: 1.7;
 $headings-margin-bottom: $spacer * 1;
 
+$enable-negative-margins: true;
 
 //Fonts
 $font-family-sans-serif: 'Livvic', sans-serif;
@@ -54,6 +55,10 @@ $grid-breakpoints: (
   xl: 1200px,
   xxl: 1400px
 );
+
+
+
+
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
