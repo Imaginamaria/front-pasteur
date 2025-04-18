@@ -14547,7 +14547,7 @@ a[href^="mailto:"]:active {
   padding-bottom: 20px;
 }
 
-#vademecum, #investigacion, #novedades, #empresa {
+#vademecum, #investigacion, #novedades {
   margin-top: 210px;
 }
 
@@ -14774,7 +14774,7 @@ a[href^="mailto:"]:active {
   .titulo-vademecum, .titulo-zafra, .titulo-empresa, .titulo-relacionados {
     width: 100%;
   }
-  #empresa, #chinfield {
+  #chinfield {
     margin-top: 0px;
   }
   .footer-contenido .redes,
