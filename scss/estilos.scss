@@ -431,7 +431,7 @@ a[href^="mailto:"]:active {
 
 // vademecum
 
-#vademecum, #investigacion, #novedades {
+#vademecum, #investigacion, #novedades, #conocenos {
   margin-top: 210px;
 }
 
@@ -746,6 +746,11 @@ a[href^="mailto:"]:active {
 .pie-pagina .nav {
   flex-direction: column;
   align-items: center;
+}
+
+#sidebar {
+  width: 90%;
+  margin: 0 auto;
 }
 
 }

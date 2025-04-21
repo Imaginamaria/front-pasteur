@@ -62,11 +62,25 @@
 
 <!-- Sección de contacto -->
 <section id="contacto" class="p-5 bg-light text-dark">
-    <div class="container-xl">
-        <div class="titulo-contacto text-center mb-4">
-            <h1 class="fw-bold text-primary">Contáctanos</h1>
-            <h3 class="text-primary">Estamos aquí para ayudarte con cualquier consulta.</h3>
-        </div>
+    <div class="container container-xl">
+
+        <div class="class container container-xl">
+
+            <!-- Breadcrumb -->
+            <div class="breadcrumbs fw-semibold">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="contacto.html">Contacto</a></li>
+                    </ol>
+                </nav>                   
+            </div>
+
+            <div>
+                <h1 class="fw-bold mt-5 mb-2 text-primary titulo-vademecum">Contacto</h1>
+                <h3 class="mb-5 text-primary text-md-start">Estamos aquí para ayudarte con cualquier consulta.</h3>
+            </div>
+
 
         <div class="row">
             <!-- Formulario a la izquierda -->
@@ -155,7 +169,7 @@
                     <div class="col-12 col-md-5 text-left text-md-start px-3 d-flex flex-column flex-md-row justify-content-between">
                         <div class="newsletter text-center text-md-start">
                             <h6 class="fw-bold">Manténgase informado</h6>
-                            <form id="subscribeForm">
+                            <form id="subscribeForm" action="https://formspree.io/f/xwpldzzd" method="post">
                                 <div class="input-group mb-3 d-flex w-100">
                                     <input type="email" class="form-control" placeholder="Tu dirección de email" id="subscribeEmail" required/>
                                     <button type="submit" class="btn btn-secondary text-white rounded-end">Suscríbete</button>
