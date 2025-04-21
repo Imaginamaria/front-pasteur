@@ -14369,7 +14369,7 @@ a:active {
 }
 
 .carousel-caption h2, .carousel-caption .h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 0 auto;
   text-align: center; /* Alinea el h2 al centro */
   width: 100%; /* Ocupa todo el ancho disponible */
@@ -14382,7 +14382,7 @@ a:active {
 }
 
 .carousel-caption .btn {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 10px; /* Espacio entre el botón y el párrafo */
   margin: 0 auto;
   display: block;
@@ -14803,7 +14803,7 @@ a[href^="mailto:"]:active {
 }
 @media (max-width: 1200px) {
   .carousel-caption h2, .carousel-caption .h2 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     margin-bottom: 10px;
   }
   .carousel-caption p {

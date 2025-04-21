@@ -148,13 +148,13 @@ mostrarEnDetalle() {
             
             <hr>
             <h5 class="text-primary fw-bold">Detalles:</h5>
-            <ul>
-            <li class="detalle-ampliacion fs-5"><strong>Información:</strong> ${this.reemplazarDashesPorBr(this.informacion)}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Dosificación:</strong> ${this.reemplazarDashesPorBr(this.dosificacion)}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Composición (cada 100 ml): </strong> ${this.reemplazarDashesPorBr(this.composicion)}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Tiempos:</strong> ${this.reemplazarDashesPorBr(this.tiempos)}</li>
-                <li class="detalle-ampliacion fs-5"><strong>Especies:</strong><br>${especieHTML}</li> <!-- Aquí se muestran las imágenes especies --> 
-                <li class="detalle-ampliacion fs-5"><strong>Presentación:<br></strong> ${presentacionHTML}</li>
+            <ul class="list-unstyled">
+            <li class="detalle-ampliacion fs-5"></i><p><strong>Información</strong> ${this.reemplazarDashesPorBr(this.informacion)}</p></li>
+                <li class="detalle-ampliacion fs-5"></i><p><strong>Dosificación</strong> ${this.reemplazarDashesPorBr(this.dosificacion)}</p></li>
+                <li class="detalle-ampliacion fs-5"></i><p><strong>Composición (cada 100 ml) </strong> ${this.reemplazarDashesPorBr(this.composicion)}</p></li>
+                <li class="detalle-ampliacion fs-5"></i><p><strong>Tiempos</strong> ${this.reemplazarDashesPorBr(this.tiempos)}</p></li>
+                <li class="detalle-ampliacion fs-5"></i><p><strong>Especies</strong><br>${especieHTML}</p></li> <!-- Aquí se muestran las imágenes especies --> 
+                <li class="detalle-ampliacion fs-5"></i><p><strong>Presentación<br></strong> ${presentacionHTML}</p></li>
             </ul>
 
             <hr>
