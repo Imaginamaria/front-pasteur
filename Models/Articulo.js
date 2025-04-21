@@ -46,19 +46,19 @@ export default class Articulo{
                             <!-- Línea separatoria en color primary -->
                             <hr class="border-secondary">
 
-                            <div class="row">
+                            <div class="row min-vh-50">
                                 <h6 class="text-dark">${this.fecha}</h6>
                             </div>
-                            <div class="row">
+                            <div class="row align-items-stretch">
                                 <div class="col-md-6">
                                     <img src="${this.imagen}" class="img-fluid" alt="${this.titulo}">
 
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="card-title text-primary fw-bold pb-3">${this.titulo}</h3>
+                                    <h3 class="card-title text-primary fw-bold pb-3 pt-sm-3">${this.titulo}</h3>
                                     <h5 class="card-title text-primary pb-2">${this.colgado}</h5>
                                     <p>${this.descripcion}</p>
-                                    <a href="articulo.html?id=${this.id}" class="btn btn-secondary stretched-link">Leer más</a>
+                                    <a href="articulo.html?id=${this.id}" class="btn btn-secondary ">Leer más</a>
 
                                 </div>
                                 
@@ -71,12 +71,13 @@ export default class Articulo{
 
         const enlaceProducto = this.generarEnlaceProducto(); // Obtenemos el enlace dinámico al producto
 
-        return `<figure class="mb-4 text-center">
-                <img src="${this.imagen}" class="img-fluid rounded shadow-lg" alt="${this.especie}">
+        return `<figure class="mb-4">
+            <span class="fecha-publicacion d-block text-muted small text-primary pb-3">${this.fecha}</span>
+                <img src="${this.imagen}" class="img-fluid rounded shadow-lg pb-3 " alt="${this.especie}">
                 </figure>
 
                 <header class="text-center border-bottom border-primary pb-3 mb-4">
-                    <span class="fecha-publicacion d-block text-muted small">${this.fecha}</span>
+                    
                     <h2 class="card-title text-primary fw-bold mt-2">${this.reemplazarDashesPorBr(this.titulo)}</h2>
                     <h4 class="card-title mt-2">${this.colgado}</h4>
                 </header>
@@ -92,8 +93,8 @@ export default class Articulo{
                     <p class="mt-3">${this.reemplazarDashesPorBr(this.detalle)}</p>
                 </section>
                 <footer class="text-primary px-3 mb-4 mt-4">
-                Para más información, consulte el producto en el siguiente enlace:<br>
-                    <a href="${enlaceProducto}" class="btn btn-secondary mt-3">Ver Producto</a>
+                <span class="fw-semibold">Para más información, consulte el producto en el siguiente enlace:</span> <br>
+                    <a href="${enlaceProducto}" class="btn btn-secondary my-3">Ver Producto</a>
                 </footer>`
     }
 
