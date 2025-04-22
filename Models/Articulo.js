@@ -71,9 +71,9 @@ export default class Articulo{
 
         const enlaceProducto = this.generarEnlaceProducto(); // Obtenemos el enlace dinámico al producto
 
-        return `<figure class="mb-4">
+        return `<figure class="mb-4 text-center">
             <span class="fecha-publicacion d-block text-muted small text-primary pb-3">${this.fecha}</span>
-                <img src="${this.imagen}" class="img-fluid rounded shadow-lg pb-3 " alt="${this.especie}">
+                <img src="${this.imagen}" class="img-fluid shadow-lg " alt="${this.especie}">
                 </figure>
 
                 <header class="text-center border-bottom border-primary pb-3 mb-4">
